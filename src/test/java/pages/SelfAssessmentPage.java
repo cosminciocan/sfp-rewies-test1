@@ -30,4 +30,8 @@ public class SelfAssessmentPage extends TestBase{
         //Added a comment here so i can check if it builds
     }
 
+    public void startNewSession(){
+//        This will eventually be a method in which I start a new session
+    }
+
 }

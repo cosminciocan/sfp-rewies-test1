@@ -2,7 +2,10 @@
 Feature: Testing self assessment
 
   Background: Login
-    Given I login with a valid "employee" user
+    Given I login with a valid "admin" user
+    And I start a new assessment session
+    Then I log out
+    And I login with a valid "employee" user
 
   Scenario: Create self assessment
     And I navigate to the Self Assessment page

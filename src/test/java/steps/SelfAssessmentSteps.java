@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import Utils.TestBase;
@@ -23,4 +24,9 @@ public class SelfAssessmentSteps extends TestBase{
         assessmentPage.completeSelfAssessmnet();
     }
 
+    @And("^I start a new assessment session$")
+    public void I_start_a_new_assessment_session() throws Throwable {
+        assessmentPage.startNewSession();
+
+    }
 }
