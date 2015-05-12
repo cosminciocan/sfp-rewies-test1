@@ -27,11 +27,11 @@ public class SelfAssessmentPage extends TestBase{
         commentField.sendKeys(generateRandomString(10));
         Assert.assertTrue(isElementPresent(submitButton));
         submitButton.click();
-        //Added a comment here so i can check if it builds
     }
 
     public void startNewSession(){
 //        This will eventually be a method in which I start a new session
+        //Adding another comment to czeck if the built is triggered in jenkins
     }
 
 }
