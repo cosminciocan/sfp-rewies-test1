@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="25.427084">
-<testcase classname="Testing self assessment" name="Create self assessment" time="25.427084">
-<system-out><![CDATA[Given I login with a valid "employee" user..................................passed
-And I navigate to the Self Assessment page..................................passed
-Then I complete my Self Assessment..........................................passed
-]]></system-out>
-</testcase>
-</testsuite>
