@@ -31,7 +31,9 @@ public class SelfAssessmentPage extends TestBase{
 
     public void startNewSession(){
 //        This will eventually be a method in which I start a new session
-        //Adding another comment to czeck if the built is triggered in jenkins
+        //Adding another comment to czeck if the built is triggered in jenkins\
+//        and another
+//        and enother one
     }
 
 }

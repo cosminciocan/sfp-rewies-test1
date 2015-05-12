@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9f279cc-cc0a-4b48-afd0-1d212621be64" name="Default" comment="Started work on adding a new method for admin to start a new session">
+    <list default="true" id="e9f279cc-cc0a-4b48-afd0-1d212621be64" name="Default" comment="Testing triggering in Jenkins">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pages/SelfAssessmentPage.java" afterPath="$PROJECT_DIR$/src/test/java/pages/SelfAssessmentPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -48,8 +48,8 @@
               <file leaf-file-name="SelfAssessmentPage.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/test/java/pages/SelfAssessmentPage.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.7202925">
-                      <caret line="33" column="78" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
+                    <state vertical-scroll-proportion="0.81352836">
+                      <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
                       <folding>
                         <element signature="imports" expanded="true" />
                         <element signature="e#276#277#0" expanded="true" />
@@ -76,8 +76,8 @@
               <file leaf-file-name="SelfAssessmentPage.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/test/java/pages/SelfAssessmentPage.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.6666667">
-                      <caret line="26" column="56" selection-start-line="26" selection-start-column="56" selection-end-line="26" selection-end-column="56" />
+                    <state vertical-scroll-proportion="0.93333334">
+                      <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
                       <folding>
                         <element signature="imports" expanded="true" />
                         <element signature="e#276#277#0" expanded="true" />
@@ -96,8 +96,8 @@
           <file leaf-file-name="self_assessment.feature" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/resources/features/self_assessment.feature">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.07741348">
-                  <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+                <state vertical-scroll-proportion="0.123861566">
+                  <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -862,7 +862,13 @@
       <option name="project" value="LOCAL" />
       <updated>1431423743967</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Testing triggering in Jenkins">
+      <created>1431430590460</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1431430590460</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -959,7 +965,8 @@
     <MESSAGE value="Removed reports" />
     <MESSAGE value="Addedd a comment" />
     <MESSAGE value="Started work on adding a new method for admin to start a new session" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started work on adding a new method for admin to start a new session" />
+    <MESSAGE value="Testing triggering in Jenkins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing triggering in Jenkins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1350,14 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/self_assessment.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07741348">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/steps/SelfAssessmentSteps.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1366,10 +1365,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/self_assessment.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.123861566">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/SelfAssessmentPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7202925">
-          <caret line="33" column="78" selection-start-line="33" selection-start-column="78" selection-end-line="33" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.93333334">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#276#277#0" expanded="true" />
