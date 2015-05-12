@@ -1,0 +1,251 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Employee Login test",
+        "description": "",
+        "id": "login-reviews;employee-login-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6351127587,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I login with a valid \"employee\" user",
+            "match": {
+              "arguments": [
+                {
+                  "val": "employee",
+                  "offset": 22
+                }
+              ],
+              "location": "HomepageSteps.I_login_with_a_valid_user(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 21060352,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should be logged in",
+            "match": {
+              "location": "HomepageSteps.I_should_be_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 634651247,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I log out",
+            "match": {
+              "location": "HomepageSteps.I_log_out()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "Reviewer Login test",
+        "description": "",
+        "id": "login-reviews;reviewer-login-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1253606511,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I login with a valid \"Reviewer\" user",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Reviewer",
+                  "offset": 22
+                }
+              ],
+              "location": "HomepageSteps.I_login_with_a_valid_user(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 80234613,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I should be logged in",
+            "match": {
+              "location": "HomepageSteps.I_should_be_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 821542036,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I log out",
+            "match": {
+              "location": "HomepageSteps.I_log_out()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Admin login test",
+        "description": "",
+        "id": "login-reviews;admin-login-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1261776428,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I login with a valid \"ADMIN\" user",
+            "match": {
+              "arguments": [
+                {
+                  "val": "ADMIN",
+                  "offset": 22
+                }
+              ],
+              "location": "HomepageSteps.I_login_with_a_valid_user(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 60256688,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I should be logged in",
+            "match": {
+              "location": "HomepageSteps.I_should_be_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1290434297,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I log out",
+            "match": {
+              "location": "HomepageSteps.I_log_out()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Login Reviews",
+    "description": "",
+    "id": "login-reviews",
+    "keyword": "Feature",
+    "uri": "homepage.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@ready"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Login",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2168988503,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I login with a valid \"employee\" user",
+            "match": {
+              "arguments": [
+                {
+                  "val": "employee",
+                  "offset": 22
+                }
+              ],
+              "location": "HomepageSteps.I_login_with_a_valid_user(String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Create self assessment",
+        "description": "",
+        "id": "testing-self-assessment;create-self-assessment",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 954804129,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I navigate to the Self Assessment page",
+            "match": {
+              "location": "SelfAssessmentSteps.I_navigate_to_the_Self_Assessment_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14218780939,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I complete my Self Assessment",
+            "match": {
+              "location": "SelfAssessmentSteps.I_complete_my_Self_Assessment()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Testing self assessment",
+    "description": "",
+    "id": "testing-self-assessment",
+    "keyword": "Feature",
+    "uri": "self_assessment.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@ready"
+      }
+    ]
+  }
+]

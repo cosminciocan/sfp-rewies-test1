@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="25.815805">
+<testcase classname="Login Reviews" name="Employee Login test" time="6.989659">
+<system-out><![CDATA[When I login with a valid "employee" user...................................passed
+Then I should be logged in..................................................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Reviews" name="Reviewer Login test" time="2.112884">
+<system-out><![CDATA[When I login with a valid "Reviewer" user...................................passed
+Then I should be logged in..................................................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Reviews" name="Admin login test" time="2.27986">
+<system-out><![CDATA[When I login with a valid "ADMIN" user......................................passed
+Then I should be logged in..................................................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing self assessment" name="Create self assessment" time="14.433402">
+<system-out><![CDATA[Given I login with a valid "employee" user..................................passed
+And I navigate to the Self Assessment page..................................passed
+Then I complete my Self Assessment..........................................passed
+]]></system-out>
+</testcase>
+</testsuite>

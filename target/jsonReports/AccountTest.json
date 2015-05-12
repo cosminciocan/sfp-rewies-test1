@@ -1,0 +1,174 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Example scenario",
+        "description": "",
+        "id": "example-feature;example-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7386229900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I open google homepage",
+            "match": {
+              "location": "HomepageSteps.I_open_google_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 384270074,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I input \"cars\" in the search field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cars",
+                  "offset": 9
+                }
+              ],
+              "location": "HomepageSteps.I_input_in_the_search_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 459008529,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I press search",
+            "match": {
+              "location": "HomepageSteps.I_press_search()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "Example scenario",
+        "description": "",
+        "id": "example-feature;example-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 435430374,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I open google homepage",
+            "match": {
+              "location": "HomepageSteps.I_open_google_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1673279296,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I input \"cars\" in the search field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cars",
+                  "offset": 9
+                }
+              ],
+              "location": "HomepageSteps.I_input_in_the_search_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 365878408,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I press search",
+            "match": {
+              "location": "HomepageSteps.I_press_search()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Example scenario",
+        "description": "",
+        "id": "example-feature;example-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 107316997,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I open google homepage",
+            "match": {
+              "location": "HomepageSteps.I_open_google_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1310608363,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I input \"cars\" in the search field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cars",
+                  "offset": 9
+                }
+              ],
+              "location": "HomepageSteps.I_input_in_the_search_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 473770591,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I press search",
+            "match": {
+              "location": "HomepageSteps.I_press_search()"
+            },
+            "keyword": "When "
+          }
+        ]
+      }
+    ],
+    "name": "Example feature",
+    "description": "",
+    "id": "example-feature",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/homepage.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@ready"
+      }
+    ]
+  }
+]
