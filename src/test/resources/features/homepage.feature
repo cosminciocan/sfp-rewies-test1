@@ -15,3 +15,4 @@ Feature: Login Reviews
     When I login with a valid "ADMIN" user
     Then I should be logged in
     And I log out
+

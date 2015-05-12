@@ -27,6 +27,7 @@ public class SelfAssessmentPage extends TestBase{
         commentField.sendKeys(generateRandomString(10));
         Assert.assertTrue(isElementPresent(submitButton));
         submitButton.click();
+        //Added a comment here so i can check if it builds
     }
 
 }
