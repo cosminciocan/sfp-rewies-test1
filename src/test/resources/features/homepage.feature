@@ -1,5 +1,6 @@
 @ready
-Feature: Login Reviews
+Feature: Login Feature
+  This feature tests the login
 
   Scenario: Employee Login test
     When I login with a valid "employee" user
