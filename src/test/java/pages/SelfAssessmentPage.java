@@ -30,6 +30,7 @@ public class SelfAssessmentPage extends TestBase{
     }
 
     public void startNewSession(){
+//        TODO: Finnish it!
 //        This will eventually be a method in which I start a new session
 
     }

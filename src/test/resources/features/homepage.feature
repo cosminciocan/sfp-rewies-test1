@@ -2,18 +2,13 @@
 Feature: Login Feature
   This feature tests the login
 
-  Scenario: Employee Login test
-    When I login with a valid "employee" user
+  Scenario Outline:  Testing login with different user types
+    Given I login with a valid "<user>" user
     Then I should be logged in
     And I log out
 
-  Scenario: Reviewer Login test
-    When I login with a valid "Reviewer" user
-    Then I should be logged in
-    And I log out
-
-  Scenario: Admin login test
-    When I login with a valid "ADMIN" user
-    Then I should be logged in
-    And I log out
-
+    Examples:
+    |user |
+    |employee |
+    |Reviewer  |
+    |ADMIN  |
