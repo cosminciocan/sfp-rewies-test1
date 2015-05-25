@@ -34,7 +34,7 @@ public class SessionsPage extends TestBase {
     public WebElement finishTeamLeadDate;
     @FindBy(xpath = "//div/div/form/div[6]/div/input")
     public WebElement finish1on1Date;
-    @FindBy(className = "btn btn-danger disabled")
+    @FindBy(css = ".btn.btn-danger.disabled")
     public WebElement currentSessionClosed;
     @FindBy(id = "btnEndCurrentSession")
     public WebElement closeCurrentSession;
@@ -52,6 +52,11 @@ public class SessionsPage extends TestBase {
     public void startNewSession() {
 //        TODO: Finnish it!
         waitForElement(addNewSessionButton, 5);
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         if (isElementPresent(currentSessionClosed)) {
             addSessionDetails();
         } else {
