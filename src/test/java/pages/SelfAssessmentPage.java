@@ -17,7 +17,7 @@ public class SelfAssessmentPage extends TestBase{
         Driver.getWebdriver().get(url);
     }
 
-    public void completeSelfAssessmnet() {
+    public void completeSelfAssessment() {
         waitForElement(commentField, 5);
         waitForElement(nextQuestionButton, 5);
         while(nextQuestionButton.isDisplayed() && !isElementPresent(nextFormDisabled)){
@@ -29,10 +29,6 @@ public class SelfAssessmentPage extends TestBase{
         submitButton.click();
     }
 
-    public void startNewSession(){
-//        TODO: Finnish it!
-//        This will eventually be a method in which I start a new session
 
-    }
 
 }

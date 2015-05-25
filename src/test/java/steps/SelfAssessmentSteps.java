@@ -21,12 +21,7 @@ public class SelfAssessmentSteps extends TestBase{
 
     @Then("^I complete my Self Assessment$")
     public void I_complete_my_Self_Assessment() throws Throwable {
-        assessmentPage.completeSelfAssessmnet();
+        assessmentPage.completeSelfAssessment();
     }
 
-    @And("^I start a new assessment session$")
-    public void I_start_a_new_assessment_session() throws Throwable {
-        assessmentPage.startNewSession();
-
-    }
 }

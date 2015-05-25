@@ -8,7 +8,7 @@ Feature: Login Feature
     And I log out
 
     Examples:
-    |user |
-    |employee |
+    |user      |
+    |employee  |
     |Reviewer  |
-    |ADMIN  |
+    |ADMIN     |

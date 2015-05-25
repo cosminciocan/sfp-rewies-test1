@@ -8,7 +8,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import webdriver.Driver;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 
 public abstract class TestBase extends Constant {
@@ -65,5 +69,10 @@ public abstract class TestBase extends Constant {
         return RandomStringUtils.randomAlphanumeric(length);
     }
 
+    public static String setDateNow() throws ParseException{
+        java.util.Date d = new Date();
+        SimpleDateFormat sd = new SimpleDateFormat("MM/dd/yyyy");
+        return sd.format(d);
+    }
 
 }

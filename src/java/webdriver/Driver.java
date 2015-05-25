@@ -21,6 +21,18 @@ public class Driver {
         });
     }
 
+
+    /** Screenshot functionality to be integrated with the fail method
+      WebDriver driver = new FirefoxDriver();
+     driver.get("http://www.google.com/");
+     File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+     // Now you can do whatever you need to do with it, for example copy somewhere
+     FileUtils.copyFile(scrFile, new File("c:\\tmp\\screenshot.png"));
+     */
+
+
+
+
     public static WebDriver getWebdriver(){
         return driver;
     }
