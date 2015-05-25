@@ -9,9 +9,7 @@ import pages.SelfAssessmentPage;
 import pages.SessionsPage;
 import webdriver.Driver;
 
-/**
- * Created by cciocan on 25-May-15.
- */
+
 public class CreateSessionSteps extends TestBase{
 
     protected SessionsPage sessionPage;

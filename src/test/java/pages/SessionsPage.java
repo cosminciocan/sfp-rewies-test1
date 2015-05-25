@@ -34,7 +34,7 @@ public class SessionsPage extends TestBase {
     public WebElement finishTeamLeadDate;
     @FindBy(xpath = "//div/div/form/div[6]/div/input")
     public WebElement finish1on1Date;
-    @FindBy(css = ".btn.btn-danger.disabled")
+    @FindBy(className = "btn btn-danger disabled")
     public WebElement currentSessionClosed;
     @FindBy(id = "btnEndCurrentSession")
     public WebElement closeCurrentSession;
