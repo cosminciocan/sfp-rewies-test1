@@ -1,6 +1,7 @@
 @ready
 Feature: Self Assessment Feature
   This Feature tests the self assessments
+  TEST
 
   Background: Login
     Given I login with a valid "admin" user
