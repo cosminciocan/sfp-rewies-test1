@@ -27,7 +27,7 @@ public class HomepageSteps extends TestBase {
 
     @Then("^I should be logged in$")
     public void I_should_be_logged_in() throws Throwable {
-        Assert.assertTrue(Driver.getWebdriver().getPageSource().contains("Hello, "));
+        Assert.assertTrue(isTextPresent("Hello, "));
     }
 
     @And("^I login with a valid \"([^\"]*)\" user$")
@@ -41,15 +41,15 @@ public class HomepageSteps extends TestBase {
                 break;
             case "admin": loginPage.adminLogin();
                 break;
-            default: System.out.println("Invalid user type");
-                fail = true;
+            default: fail = true;
                 break;
         }
-        Assert.assertFalse(fail);
+        Assert.assertFalse("The supplied user is not in the list of predefined users!",fail);
     }
 
     @And("^I log out$")
     public void I_log_out() throws Throwable {
         homepage.logOut();
+        Assert.assertFalse(isTextPresent("Hello, "));
     }
 }

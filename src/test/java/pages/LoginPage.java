@@ -43,6 +43,4 @@ public class LoginPage extends TestBase {
         loginButton.click();
         waitForElement(profileLink, 5);
     }
-
-
 }

@@ -1,7 +1,6 @@
 @ready
 Feature: Self Assessment Feature
   This Feature tests the self assessments
-  TEST
 
   Background: Login
     Given I login with a valid "admin" user
@@ -10,5 +9,6 @@ Feature: Self Assessment Feature
     And I login with a valid "employee" user
 
   Scenario: Create self assessment
-    And I navigate to the Self Assessment page
-    Then I complete my Self Assessment
+    Given I navigate to the Self Assessment page
+    When I complete my Self Assessment
+    Then The Self Assessment is saved

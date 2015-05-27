@@ -4,6 +4,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import Utils.TestBase;
+import junit.framework.Assert;
 import org.openqa.selenium.support.PageFactory;
 import pages.SelfAssessmentPage;
 import webdriver.Driver;
@@ -24,4 +25,8 @@ public class SelfAssessmentSteps extends TestBase{
         assessmentPage.completeSelfAssessment();
     }
 
+    @Then("^The Self Assessment is saved$")
+    public void The_Self_Assessment_is_saved() throws Throwable {
+        Assert.assertFalse(isElementPresent(submitButton));
+    }
 }

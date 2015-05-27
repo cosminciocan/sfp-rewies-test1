@@ -2,12 +2,12 @@ package Utils;
 
 import Utils.Constant;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import webdriver.Driver;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -75,4 +75,33 @@ public abstract class TestBase extends Constant {
         return sd.format(d);
     }
 
+    public void Sleep(int seconds){
+        int milliseconds = seconds * 1000;
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public boolean isTextPresent(String text) {
+        if (Driver.getWebdriver().getPageSource().contains(text)) {
+            System.out.println("Text found");
+            return true;
+        } else {
+            System.out.println("Expected text not found in the page source!");
+            return false;
+        }
+    }
+
+    public boolean elementContainsText(WebElement e, String text){
+        String pageText = e.getText();
+        if  (pageText.contains(text)){
+           System.out.println("Text found!");
+            return true;
+        } else {
+            System.out.println("Text not found!");
+            return false;
+        }
+    }
 }

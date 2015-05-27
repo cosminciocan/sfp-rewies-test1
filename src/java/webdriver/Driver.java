@@ -31,8 +31,6 @@ public class Driver {
      */
 
 
-
-
     public static WebDriver getWebdriver(){
         return driver;
     }

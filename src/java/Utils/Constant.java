@@ -3,9 +3,6 @@ package Utils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.sql.Time;
-import java.util.Date;
-
 
 public class Constant {
 
@@ -22,8 +19,6 @@ public class Constant {
 
     public static final String adminUsername = "horatiu";
     public static final String adminPassword = "impersonate";
-
-
 
 
     /*
@@ -46,5 +41,6 @@ public class Constant {
     public WebElement logoutButton;
     @FindBy(css = ".btn.btn-lg.btn-primary.btn-block")
     public WebElement loginButton;
-
+    @FindBy(id = "btnSave")
+    public WebElement saveButton;
 }

@@ -6,12 +6,8 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import webdriver.Driver;
-
-import java.sql.Time;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+
 
 public class SessionsPage extends TestBase {
 
@@ -38,8 +34,7 @@ public class SessionsPage extends TestBase {
     public WebElement currentSessionClosed;
     @FindBy(id = "btnEndCurrentSession")
     public WebElement closeCurrentSession;
-    @FindBy(id = "btnSave")
-    public WebElement saveButton;
+
     @FindBy(xpath = "//div/div/form/div[7]/input")
     public WebElement isActiveCheckbox;
 
@@ -48,15 +43,10 @@ public class SessionsPage extends TestBase {
         Driver.getWebdriver().get(url);
     }
 
-
+//        TODO: Refactor these methods
     public void startNewSession() {
-//        TODO: Finnish it!
         waitForElement(addNewSessionButton, 5);
-        try {
-            Thread.sleep(1500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Sleep(2);
         if (isElementPresent(currentSessionClosed)) {
             addSessionDetails();
         } else {
@@ -66,9 +56,7 @@ public class SessionsPage extends TestBase {
             waitForElement(addNewSessionButton, 5);
             addSessionDetails();
         }
-
     }
-
 
     public void addSessionDetails() {
         addNewSessionButton.click();
@@ -85,11 +73,7 @@ public class SessionsPage extends TestBase {
             e.printStackTrace();
         }
         saveButton.click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Sleep(2);
         Assert.assertFalse(isElementPresent(sessionNameField));
     }
 }

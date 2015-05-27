@@ -20,7 +20,6 @@ public class CreateSessionSteps extends TestBase{
     public void I_start_a_new_assessment_session() throws Throwable {
         sessionPage.openPage();
         sessionPage.startNewSession();
-        Assert.assertFalse(Driver.getWebdriver().getPageSource().contains("is required"));
-
+        Assert.assertFalse(isTextPresent("is required"));
     }
 }
