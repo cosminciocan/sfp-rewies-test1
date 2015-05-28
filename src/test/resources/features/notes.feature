@@ -4,3 +4,4 @@ Feature: Notes Feature
 
   Scenario: Add a note to self
     Given I login with a valid "employee" user
+    And I log out
