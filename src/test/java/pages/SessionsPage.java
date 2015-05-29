@@ -2,10 +2,16 @@ package pages;
 
 
 import Utils.TestBase;
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import webdriver.Driver;
+
+import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
 
 
@@ -74,6 +80,14 @@ public class SessionsPage extends TestBase {
         }
         saveButton.click();
         Sleep(5);
+
+        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(scrFile, new File("c:\\tmp\\screenshot.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         Assert.assertFalse(isElementPresent(sessionNameField));
     }
 }
