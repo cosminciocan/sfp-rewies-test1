@@ -73,7 +73,7 @@ public class SessionsPage extends TestBase {
             e.printStackTrace();
         }
         saveButton.click();
-        Sleep(2);
+        Sleep(5);
         Assert.assertFalse(isElementPresent(sessionNameField));
     }
 }

@@ -15,12 +15,12 @@ public class SelfAssessmentPage extends TestBase{
     // LOCATORS
 
     @FindBy(className = "box-title")
-    public WebElement pageName;
+    public WebElement pageLoadedElement;
     // METHODS
     public void openPage(){
         Driver.getWebdriver().get(url);
-        waitForElement(pageName, 5);
-        Assert.assertTrue(elementContainsText(pageName, "My Current Self Assessment"));
+        waitForElement(pageLoadedElement, 5);
+        Assert.assertTrue(elementContainsText(pageLoadedElement, "My Current Self Assessment"));
     }
 
     public void completeSelfAssessment() {
