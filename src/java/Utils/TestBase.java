@@ -3,8 +3,12 @@ package Utils;
 import Utils.Constant;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.security.Credentials;
+import org.openqa.selenium.security.UserAndPassword;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import webdriver.Driver;
@@ -103,5 +107,7 @@ public abstract class TestBase extends Constant {
             System.out.println("Text not found!");
             return false;
         }
-    }
+}
+
+
 }

@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -20,27 +21,22 @@ public class HomepageSteps extends TestBase {
         loginPage = PageFactory.initElements(Driver.getWebdriver(), LoginPage.class);
     }
 
-    @Given("^I open the Reviews login page$")
-    public void I_Open_Reviews() throws Throwable {
-        homepage.openPage();
-    }
 
     @Then("^I should be logged in$")
     public void I_should_be_logged_in() throws Throwable {
-        Assert.assertTrue(isTextPresent("Hello, "));
+        Assert.assertTrue(isTextPresent("Cosmin Ciocan"));
     }
 
     @And("^I login with a valid \"([^\"]*)\" user$")
     public void I_login_with_a_valid_user(String user) throws Throwable {
-        loginPage.openPage();
         boolean fail = false;
         switch (user.toLowerCase()) {
-            case "employee": loginPage.employeeLogin();
+            case "volunteer": loginPage.volunteerLogin();
                 break;
-            case "reviewer": loginPage.reviewerLogin();
-                break;
-            case "admin": loginPage.adminLogin();
-                break;
+//            case "reviewer": loginPage.reviewerLogin();
+//                break;
+//            case "admin": loginPage.adminLogin();
+//                break;
             default: fail = true;
                 break;
         }
@@ -51,5 +47,23 @@ public class HomepageSteps extends TestBase {
     public void I_log_out() throws Throwable {
         homepage.logOut();
         Assert.assertFalse(isTextPresent("Hello, "));
+    }
+
+    @Given("^I access the UI Homepage$")
+    public void I_access_UI_homepage() throws Throwable {
+    }
+
+    @Given("^I access the \"([^\"]*)\" site$")
+    public void I_access_the_site(String site) throws Throwable {
+        boolean fail = false;
+        switch (site.toLowerCase()){
+            case "ui": homepage.openUIPage();
+                break;
+            case "staff": homepage.openPage();
+                break;
+            default: fail = true;
+                break;
+        }
+        Assert.assertFalse("The supplied site is not in the list of predefined sites!",fail);
     }
 }

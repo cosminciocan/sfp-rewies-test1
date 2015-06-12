@@ -1,6 +1,7 @@
 package webdriver;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
@@ -9,7 +10,9 @@ public class Driver {
     private static WebDriver driver;
 
     public static void initWebdriver() {
-        driver = new FirefoxDriver();
+//        driver = new FirefoxDriver(); // for Firefox
+        System.setProperty("webdriver.chrome.driver", "D:\\Personal\\personal work\\JAVA SFP Reviews\\sfp-rewies-test1\\chromeDriver\\chromedriver.exe");
+        driver = new ChromeDriver(); // For chrome
         System.out.println("Starting browser");
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
