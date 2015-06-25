@@ -15,8 +15,8 @@ import webdriver.Driver;
 public class Homepage extends TestBase{
 
     // URL
-    public static String UIUrl = "http://sfvm22/VMS";
-    public static String url = "http://sfvm22/VMSStaff";
+    public static String url = BaseURL;
+    public static String urlStaff = StaffURL;
 
     // LOCATORS
     @FindBy(css = "a[href*='/VMS/Account/LogOff']")
@@ -26,16 +26,16 @@ public class Homepage extends TestBase{
 
     // METHODS
     public void openUIPage(){
-        Driver.getWebdriver().get(UIUrl);
+        Driver.getWebdriver().get(url);
     }
 
 
     public void openPage(){
-        Driver.getWebdriver().get(url);
+        Driver.getWebdriver().get(urlStaff);
     }
 
     public void logOut(){
-        waitForElement(signOutButton,5);
+        waitForElement(signOutButton, defaultTimeOut);
         signOutButton.click();
     }
 

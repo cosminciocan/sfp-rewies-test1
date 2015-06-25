@@ -1,4 +1,44 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("homepage.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Staff/CreateCapacityShift.feature");
+formatter.feature({
+  "line": 2,
+  "name": "Create capacity shift",
+  "description": "",
+  "id": "create-capacity-shift",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@ready"
+    }
+  ]
+});
+formatter.scenario({
+  "line": 4,
+  "name": "Create a capacity shift",
+  "description": "",
+  "id": "create-capacity-shift;create-a-capacity-shift",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 5,
+  "name": "I access the \"staff\" site",
+  "keyword": "Given "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "staff",
+      "offset": 14
+    }
+  ],
+  "location": "HomepageSteps.I_access_the_site(String)"
+});
+formatter.result({
+  "duration": 17350280001,
+  "status": "passed"
+});
+formatter.uri("UI/homepage.feature");
 formatter.feature({
   "line": 2,
   "name": "Login Feature",
@@ -12,301 +52,50 @@ formatter.feature({
     }
   ]
 });
-formatter.scenarioOutline({
-  "line": 5,
-  "name": "Testing login with different user types",
-  "description": "",
-  "id": "login-feature;testing-login-with-different-user-types",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 6,
-  "name": "I login with a valid \"\u003cuser\u003e\" user",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "I should be logged in",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "I log out",
-  "keyword": "And "
-});
-formatter.examples({
-  "line": 10,
-  "name": "",
-  "description": "",
-  "id": "login-feature;testing-login-with-different-user-types;",
-  "rows": [
-    {
-      "cells": [
-        "user"
-      ],
-      "line": 11,
-      "id": "login-feature;testing-login-with-different-user-types;;1"
-    },
-    {
-      "cells": [
-        "employee"
-      ],
-      "line": 12,
-      "id": "login-feature;testing-login-with-different-user-types;;2"
-    },
-    {
-      "cells": [
-        "Reviewer"
-      ],
-      "line": 13,
-      "id": "login-feature;testing-login-with-different-user-types;;3"
-    },
-    {
-      "cells": [
-        "ADMIN"
-      ],
-      "line": 14,
-      "id": "login-feature;testing-login-with-different-user-types;;4"
-    }
-  ],
-  "keyword": "Examples"
-});
 formatter.scenario({
-  "line": 12,
-  "name": "Testing login with different user types",
-  "description": "",
-  "id": "login-feature;testing-login-with-different-user-types;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@ready"
-    }
-  ]
-});
-formatter.step({
   "line": 6,
-  "name": "I login with a valid \"employee\" user",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "I should be logged in",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "I log out",
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "employee",
-      "offset": 22
-    }
-  ],
-  "location": "HomepageSteps.I_login_with_a_valid_user(String)"
-});
-formatter.result({
-  "duration": 26670090139,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HomepageSteps.I_should_be_logged_in()"
-});
-formatter.result({
-  "duration": 33141113,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HomepageSteps.I_log_out()"
-});
-formatter.result({
-  "duration": 1198506000,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 13,
-  "name": "Testing login with different user types",
+  "name": "Login to the UI site",
   "description": "",
-  "id": "login-feature;testing-login-with-different-user-types;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@ready"
-    }
-  ]
-});
-formatter.step({
-  "line": 6,
-  "name": "I login with a valid \"Reviewer\" user",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "I should be logged in",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "I log out",
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Reviewer",
-      "offset": 22
-    }
-  ],
-  "location": "HomepageSteps.I_login_with_a_valid_user(String)"
-});
-formatter.result({
-  "duration": 2391359855,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HomepageSteps.I_should_be_logged_in()"
-});
-formatter.result({
-  "duration": 66867256,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HomepageSteps.I_log_out()"
-});
-formatter.result({
-  "duration": 1411304999,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 14,
-  "name": "Testing login with different user types",
-  "description": "",
-  "id": "login-feature;testing-login-with-different-user-types;;4",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@ready"
-    }
-  ]
-});
-formatter.step({
-  "line": 6,
-  "name": "I login with a valid \"ADMIN\" user",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "I should be logged in",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 8,
-  "name": "I log out",
-  "keyword": "And "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "ADMIN",
-      "offset": 22
-    }
-  ],
-  "location": "HomepageSteps.I_login_with_a_valid_user(String)"
-});
-formatter.result({
-  "duration": 2094546104,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HomepageSteps.I_should_be_logged_in()"
-});
-formatter.result({
-  "duration": 46744076,
-  "status": "passed"
-});
-formatter.match({
-  "location": "HomepageSteps.I_log_out()"
-});
-formatter.result({
-  "duration": 1267604427,
-  "status": "passed"
-});
-formatter.uri("notes.feature");
-formatter.feature({
-  "line": 2,
-  "name": "Notes Feature",
-  "description": "This feature tests the notes",
-  "id": "notes-feature",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@ready"
-    }
-  ]
-});
-formatter.scenario({
-  "line": 5,
-  "name": "Add a note to self",
-  "description": "",
-  "id": "notes-feature;add-a-note-to-self",
+  "id": "login-feature;login-to-the-ui-site",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 6,
-  "name": "I login with a valid \"employee\" user",
+  "line": 7,
+  "name": "I access the \"ui\" site",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
-  "name": "I log out",
-  "keyword": "And "
+  "line": 8,
+  "name": "I should be logged in",
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "employee",
-      "offset": 22
+      "val": "ui",
+      "offset": 14
     }
   ],
-  "location": "HomepageSteps.I_login_with_a_valid_user(String)"
+  "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 2213875505,
+  "duration": 11442869538,
   "status": "passed"
 });
 formatter.match({
-  "location": "HomepageSteps.I_log_out()"
+  "location": "HomepageSteps.I_should_be_logged_in()"
 });
 formatter.result({
-  "duration": 2504908420,
+  "duration": 40554208,
   "status": "passed"
 });
-formatter.uri("self_assessment.feature");
+formatter.uri("UI/makeReservation.feature");
 formatter.feature({
   "line": 2,
-  "name": "Self Assessment Feature",
-  "description": "This Feature tests the self assessments",
-  "id": "self-assessment-feature",
+  "name": "Making reservations tests",
+  "description": "",
+  "id": "making-reservations-tests",
   "keyword": "Feature",
   "tags": [
     {
@@ -316,108 +105,108 @@ formatter.feature({
   ]
 });
 formatter.background({
-  "line": 5,
-  "name": "Login",
+  "line": 4,
+  "name": "Create a capacity shift",
   "description": "",
   "type": "background",
   "keyword": "Background"
 });
 formatter.step({
-  "line": 6,
-  "name": "I login with a valid \"admin\" user",
+  "line": 5,
+  "name": "I access the \"staff\" site",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 7,
-  "name": "I start a new assessment session",
+  "line": 6,
+  "name": "I create a capacity shift",
   "keyword": "And "
 });
 formatter.step({
-  "line": 8,
-  "name": "I log out",
+  "line": 7,
+  "name": "I access the \"ui\" site",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 9,
-  "name": "I login with a valid \"employee\" user",
+  "line": 8,
+  "name": "I should be logged in",
   "keyword": "And "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "admin",
-      "offset": 22
+      "val": "staff",
+      "offset": 14
     }
   ],
-  "location": "HomepageSteps.I_login_with_a_valid_user(String)"
+  "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 2191447332,
+  "duration": 195481450,
   "status": "passed"
 });
 formatter.match({
-  "location": "CreateSessionSteps.I_start_a_new_assessment_session()"
+  "location": "CreateCapacityShiftSteps.I_create_a_capacity_shift()"
 });
 formatter.result({
-  "duration": 22519888694,
-  "error_message": "org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with\nCommand duration or timeout: 1.14 seconds\nBuild info: version: \u00272.45.0\u0027, revision: \u00275017cb8e7ca8e37638dc3091b2440b90a1d8686f\u0027, time: \u00272015-02-27 09:10:26\u0027\nSystem info: host: \u0027SF14\u0027, ip: \u0027192.168.0.147\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_40\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities [{applicationCacheEnabled\u003dtrue, rotatable\u003dfalse, handlesAlerts\u003dtrue, databaseEnabled\u003dtrue, version\u003d11.0, platform\u003dWINDOWS, nativeEvents\u003dfalse, acceptSslCerts\u003dtrue, webStorageEnabled\u003dtrue, locationContextEnabled\u003dtrue, browserName\u003dfirefox, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue}]\nSession ID: 1bedef61-9cda-46be-804e-b6a7e42b4813\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:422)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)\r\n\tat sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:497)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)\r\n\tat com.sun.proxy.$Proxy13.click(Unknown Source)\r\n\tat pages.SessionsPage.addSessionDetails(SessionsPage.java:77)\r\n\tat pages.SessionsPage.startNewSession(SessionsPage.java:63)\r\n\tat steps.CreateSessionSteps.I_start_a_new_assessment_session(CreateSessionSteps.java:22)\r\n\tat ✽.And I start a new assessment session(self_assessment.feature:7)\r\nCaused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with\nBuild info: version: \u00272.45.0\u0027, revision: \u00275017cb8e7ca8e37638dc3091b2440b90a1d8686f\u0027, time: \u00272015-02-27 09:10:26\u0027\nSystem info: host: \u0027SF14\u0027, ip: \u0027192.168.0.147\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_40\u0027\nDriver info: driver.version: unknown\r\n\tat \u003canonymous class\u003e.\u003canonymous method\u003e(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9587)\r\n\tat \u003canonymous class\u003e.\u003canonymous method\u003e(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12257)\r\n\tat \u003canonymous class\u003e.\u003canonymous method\u003e(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12274)\r\n\tat \u003canonymous class\u003e.\u003canonymous method\u003e(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)\r\n",
+  "duration": 11228477,
+  "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open\n  (Session info: chrome\u003d43.0.2357.124)\n  (Driver info: chromedriver\u003d2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3),platform\u003dWindows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 4 milliseconds: null\nBuild info: version: \u00272.45.0\u0027, revision: \u00275017cb8e7ca8e37638dc3091b2440b90a1d8686f\u0027, time: \u00272015-02-27 09:10:26\u0027\nSystem info: host: \u0027SF14\u0027, ip: \u0027192.168.0.147\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_40\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, chrome\u003d{userDataDir\u003dC:\\Users\\cciocan\\AppData\\Local\\Temp\\scoped_dir14148_16792}, takesHeapSnapshot\u003dtrue, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, version\u003d43.0.2357.124, platform\u003dWIN8_1, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dtrue, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue}]\nSession ID: 5e8296c9b82c12fa3970784951078022\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:422)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)\r\n\tat pages.EditCapacityShiftPage.openPage(EditCapacityShiftPage.java:39)\r\n\tat steps.CreateCapacityShiftSteps.I_create_a_capacity_shift(CreateCapacityShiftSteps.java:22)\r\n\tat ✽.And I create a capacity shift(UI/makeReservation.feature:6)\r\n",
   "status": "failed"
 });
 formatter.match({
-  "location": "HomepageSteps.I_log_out()"
+  "arguments": [
+    {
+      "val": "ui",
+      "offset": 14
+    }
+  ],
+  "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "employee",
-      "offset": 22
-    }
-  ],
-  "location": "HomepageSteps.I_login_with_a_valid_user(String)"
+  "location": "HomepageSteps.I_should_be_logged_in()"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.scenario({
-  "line": 11,
-  "name": "Create self assessment",
+  "line": 10,
+  "name": "Make a reservation",
   "description": "",
-  "id": "self-assessment-feature;create-self-assessment",
+  "id": "making-reservations-tests;make-a-reservation",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 12,
-  "name": "I navigate to the Self Assessment page",
+  "line": 11,
+  "name": "I navigate to the Make a Reservation page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 13,
-  "name": "I complete my Self Assessment",
+  "line": 12,
+  "name": "I fill in the details",
   "keyword": "When "
 });
 formatter.step({
-  "line": 14,
-  "name": "The Self Assessment is saved",
+  "line": 13,
+  "name": "I should see the list of available reservations",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "SelfAssessmentSteps.I_navigate_to_the_Self_Assessment_page()"
+  "location": "MakeReservationSteps.I_navigate_to_the_Make_a_Reservation_page()"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "SelfAssessmentSteps.I_complete_my_Self_Assessment()"
+  "location": "MakeReservationSteps.I_fill_in_the_details()"
 });
 formatter.result({
   "status": "skipped"
 });
 formatter.match({
-  "location": "SelfAssessmentSteps.The_Self_Assessment_is_saved()"
+  "location": "MakeReservationSteps.I_should_see_the_list_of_available_reservations()"
 });
 formatter.result({
   "status": "skipped"

@@ -38,8 +38,7 @@ public abstract class TestBase extends Constant {
 
     public WebElement waitForElement(WebElement name, int timeOut) {
         WebDriverWait wait = new WebDriverWait(driver, timeOut);
-        WebElement element = wait.until(ExpectedConditions.visibilityOf(name));
-        return element;
+        return wait.until(ExpectedConditions.visibilityOf(name));
     }
 
 //  This method returns a boolean value if the element is found/not found
@@ -49,8 +48,8 @@ public abstract class TestBase extends Constant {
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
 
         try {
-//           webelement.isDisplayed();
             webelement.getTagName();
+//           webelement.isDisplayed();
             exists = true;
 
         } catch (Throwable e) {

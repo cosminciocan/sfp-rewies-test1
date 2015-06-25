@@ -27,21 +27,6 @@ public class HomepageSteps extends TestBase {
         Assert.assertTrue(isTextPresent("Cosmin Ciocan"));
     }
 
-    @And("^I login with a valid \"([^\"]*)\" user$")
-    public void I_login_with_a_valid_user(String user) throws Throwable {
-        boolean fail = false;
-        switch (user.toLowerCase()) {
-            case "volunteer": loginPage.volunteerLogin();
-                break;
-//            case "reviewer": loginPage.reviewerLogin();
-//                break;
-//            case "admin": loginPage.adminLogin();
-//                break;
-            default: fail = true;
-                break;
-        }
-        Assert.assertFalse("The supplied user is not in the list of predefined users!",fail);
-    }
 
     @And("^I log out$")
     public void I_log_out() throws Throwable {
@@ -49,15 +34,12 @@ public class HomepageSteps extends TestBase {
         Assert.assertFalse(isTextPresent("Hello, "));
     }
 
-    @Given("^I access the UI Homepage$")
-    public void I_access_UI_homepage() throws Throwable {
-    }
-
     @Given("^I access the \"([^\"]*)\" site$")
     public void I_access_the_site(String site) throws Throwable {
         boolean fail = false;
         switch (site.toLowerCase()){
             case "ui": homepage.openUIPage();
+                loginPage.volunteerLogin();
                 break;
             case "staff": homepage.openPage();
                 break;

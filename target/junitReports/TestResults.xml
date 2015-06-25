@@ -1,70 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="64.610284">
-<testcase classname="Login Feature" name="Testing login with different user types" time="27.901737">
-<system-out><![CDATA[Given I login with a valid "employee" user..................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="29.040414">
+<testcase classname="Create capacity shift" name="Create a capacity shift" time="17.35028">
+<system-out><![CDATA[Given I access the "staff" site.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Feature" name="Login to the UI site" time="11.483424">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
 Then I should be logged in..................................................passed
-And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login Feature" name="Testing login with different user types 2" time="3.869532">
-<system-out><![CDATA[Given I login with a valid "Reviewer" user..................................passed
-Then I should be logged in..................................................passed
-And I log out...............................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Login Feature" name="Testing login with different user types 3" time="3.408895">
-<system-out><![CDATA[Given I login with a valid "ADMIN" user.....................................passed
-Then I should be logged in..................................................passed
-And I log out...............................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Notes Feature" name="Add a note to self" time="4.718784">
-<system-out><![CDATA[Given I login with a valid "employee" user..................................passed
-And I log out...............................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Self Assessment Feature" name="Create self assessment" time="24.711336">
-<failure message="org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with&#10;Command duration or timeout: 1.14 seconds&#10;Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'&#10;System info: host: 'SF14', ip: '192.168.0.147', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=11.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 1bedef61-9cda-46be-804e-b6a7e42b4813&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)&#13;&#10;&#9;at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;&#10;&#9;at java.lang.reflect.Method.invoke(Method.java:497)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)&#13;&#10;&#9;at com.sun.proxy.$Proxy13.click(Unknown Source)&#13;&#10;&#9;at pages.SessionsPage.addSessionDetails(SessionsPage.java:77)&#13;&#10;&#9;at pages.SessionsPage.startNewSession(SessionsPage.java:63)&#13;&#10;&#9;at steps.CreateSessionSteps.I_start_a_new_assessment_session(CreateSessionSteps.java:22)&#13;&#10;&#9;at ✽.And I start a new assessment session(self_assessment.feature:7)&#13;&#10;Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with&#10;Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'&#10;System info: host: 'SF14', ip: '192.168.0.147', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'&#10;Driver info: driver.version: unknown&#13;&#10;&#9;at &lt;anonymous class&gt;.&lt;anonymous method&gt;(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9587)&#13;&#10;&#9;at &lt;anonymous class&gt;.&lt;anonymous method&gt;(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12257)&#13;&#10;&#9;at &lt;anonymous class&gt;.&lt;anonymous method&gt;(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12274)&#13;&#10;&#9;at &lt;anonymous class&gt;.&lt;anonymous method&gt;(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)&#13;&#10;"><![CDATA[Given I login with a valid "admin" user.....................................passed
-And I start a new assessment session........................................failed
-Then I log out..............................................................skipped
-And I login with a valid "employee" user....................................skipped
-Given I navigate to the Self Assessment page................................skipped
-When I complete my Self Assessment..........................................skipped
-Then The Self Assessment is saved...........................................skipped
+<testcase classname="Making reservations tests" name="Make a reservation" time="0.20671">
+<failure message="org.openqa.selenium.UnhandledAlertException: unexpected alert open&#10;  (Session info: chrome=43.0.2357.124)&#10;  (Driver info: chromedriver=2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 4 milliseconds: null&#10;Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'&#10;System info: host: 'SF14', ip: '192.168.0.147', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\cciocan\AppData\Local\Temp\scoped_dir14148_16792}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=43.0.2357.124, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 5e8296c9b82c12fa3970784951078022&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)&#13;&#10;&#9;at pages.EditCapacityShiftPage.openPage(EditCapacityShiftPage.java:39)&#13;&#10;&#9;at steps.CreateCapacityShiftSteps.I_create_a_capacity_shift(CreateCapacityShiftSteps.java:22)&#13;&#10;&#9;at ✽.And I create a capacity shift(UI/makeReservation.feature:6)&#13;&#10;"><![CDATA[Given I access the "staff" site.............................................passed
+And I create a capacity shift...............................................failed
+Then I access the "ui" site.................................................skipped
+And I should be logged in...................................................skipped
+Given I navigate to the Make a Reservation page.............................skipped
+When I fill in the details..................................................skipped
+Then I should see the list of available reservations........................skipped
 
 StackTrace:
-org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 1.14 seconds
+org.openqa.selenium.UnhandledAlertException: unexpected alert open
+  (Session info: chrome=43.0.2357.124)
+  (Driver info: chromedriver=2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds: null
 Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
 System info: host: 'SF14', ip: '192.168.0.147', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=11.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 1bedef61-9cda-46be-804e-b6a7e42b4813
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\cciocan\AppData\Local\Temp\scoped_dir14148_16792}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=43.0.2357.124, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5e8296c9b82c12fa3970784951078022
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at pages.SessionsPage.addSessionDetails(SessionsPage.java:77)
-	at pages.SessionsPage.startNewSession(SessionsPage.java:63)
-	at steps.CreateSessionSteps.I_start_a_new_assessment_session(CreateSessionSteps.java:22)
-	at ✽.And I start a new assessment session(self_assessment.feature:7)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
-System info: host: 'SF14', ip: '192.168.0.147', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
-Driver info: driver.version: unknown
-	at <anonymous class>.<anonymous method>(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9587)
-	at <anonymous class>.<anonymous method>(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12257)
-	at <anonymous class>.<anonymous method>(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12274)
-	at <anonymous class>.<anonymous method>(file:///C:/Users/cciocan/AppData/Local/Temp/anonymous6478182573360640660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
+	at pages.EditCapacityShiftPage.openPage(EditCapacityShiftPage.java:39)
+	at steps.CreateCapacityShiftSteps.I_create_a_capacity_shift(CreateCapacityShiftSteps.java:22)
+	at ✽.And I create a capacity shift(UI/makeReservation.feature:6)
 ]]></failure>
 </testcase>
 </testsuite>

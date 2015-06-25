@@ -28,7 +28,7 @@ public class LoginPage extends TestBase {
     public void volunteerLogin(){
         usernameField.sendKeys(volunteerUser);
         continueButton.click();
-        waitForElement(passwordField, 5);
+        waitForElement(passwordField, defaultTimeOut);
         passwordField.sendKeys(volunteerPassword);
         continueButton.click();
     }
