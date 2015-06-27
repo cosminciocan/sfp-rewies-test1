@@ -2,6 +2,7 @@ package pages;
 
 import Utils.TestBase;
 import junit.framework.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import webdriver.Driver;
@@ -13,26 +14,11 @@ public class MakeReservationPage extends TestBase{
     private static String url = BaseURL + "/ReservationWizard";
 
 //    Locators
-    @FindBy(id = "5071")
-    public WebElement processingCenterId;
-    @FindBy(css = ".multiselectList .datesCheckbox")
-    public WebElement dateCheckbox;
-    @FindBy(id = "txtCapacity")
-    public WebElement groupSizeText;
-    @FindBy(id = "btnFindReservations")
-    public WebElement findReservationButton;
-    @FindBy(id = "ui-dialog-title-divConfirmMakeReservation")
-    public WebElement congratulateDiv;
-    @FindBy(css = ".ui-dialog-titlebar")
-    public WebElement confirmationDiv;
 
-    @FindBy(css = ".resLocation .date")
-    public WebElement reservationDate;
 
 
 
 //    Methods
-
     public void openPage(){
         Driver.getWebdriver().get(url);
     }
@@ -47,19 +33,36 @@ public class MakeReservationPage extends TestBase{
 
     public void check_list_loaded(){
         waitForElement(table, defaultTimeOut);
+        searchForCurrentReservation();
         waitForElement(makeReservationButton,defaultTimeOut);
     }
 
     public void makeReservation(){
+//        TODO: Refactor this to remove the sleep
+
+        Sleep(1);
         makeReservationButton.click();
         waitForElement(confirmationDiv, defaultTimeOut);
     }
 
     public void checkReservationDetails(){
+        waitForElement(reservationDate, defaultTimeOut);
         Assert.assertTrue(elementContainsText(congratulateDiv, "Congratulations!"));
-        System.out.println("This is the date from the reservation: " + reservationDate.getText());
-        System.out.println("This is the date from the reservation: " + simpleDate.format(date));
-        Assert.assertTrue(elementContainsText(reservationDate, simpleDate.format(date)));
+//        The date format is DD/m/yyyy. After september needs to be changed to: DD/mm/yyyy
+        Assert.assertTrue(elementContainsText(reservationDate, simpleDate.format(myDate)));
     }
+
+    public void searchForCurrentReservation(){
+        int row = 2; // first table row
+        boolean foundReservationDetails = false;
+        do{
+            String tableRowText = driver.findElement(By.cssSelector(".ui-jqgrid-btable tr:nth-child(" + row + ")")).getText();
+            if (tableRowText.contains(myDate.toString())){
+                foundReservationDetails = true;
+                row++;
+            }
+        }while(!foundReservationDetails);
+    }
+
 
 }

@@ -19,7 +19,7 @@ public class Homepage extends TestBase{
     public static String urlStaff = StaffURL;
 
     // LOCATORS
-    @FindBy(css = "a[href*='/VMS/Account/LogOff']")
+    @FindBy(linkText = "SIGN OUT")
     public WebElement signOutButton;
 
 
@@ -35,6 +35,8 @@ public class Homepage extends TestBase{
     }
 
     public void logOut(){
+        waitForElement(expandNameMenu, defaultTimeOut);
+        expandNameMenu.click();
         waitForElement(signOutButton, defaultTimeOut);
         signOutButton.click();
     }

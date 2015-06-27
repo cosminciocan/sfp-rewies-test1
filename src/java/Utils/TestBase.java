@@ -106,7 +106,35 @@ public abstract class TestBase extends Constant {
             System.out.println("Text not found!");
             return false;
         }
-}
+    }
 
+    public void waitUntilElementNotPresent(WebElement element){
+        int timeOutTime = 0;
+        boolean present = false;
+        while(isElementPresent(element)){
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            timeOutTime = timeOutTime + 100;
+            if(timeOutTime == 5000){
+                System.err.println("Timed out waiting for the element to disappear!");
+                present = true;
+                break;
+            }
+        }
+        Assert.assertFalse(present);
+    }
+
+    public boolean isAlertPresent(){
+        try{
+            driver.switchTo().alert();
+            return true;
+        }//try
+        catch(Exception e){
+            return false;
+        }//catch
+    }
 
 }

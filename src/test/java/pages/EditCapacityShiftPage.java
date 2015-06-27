@@ -12,24 +12,12 @@ public class EditCapacityShiftPage extends TestBase {
 //    TODO: Refactor the date method to add date + 1
 //    public static java.util.Date d = new Date();
 //    public static SimpleDateFormat sd = new SimpleDateFormat("MM/dd/yyyy");
-    public  String url = StaffURL + "/Shift/Index?locationId=5071&dates=" + simpleDate.format(date);
+    public  String url = StaffURL + "/Shift/Index?locationId=" + processingCenterID + "&dates=" + simpleDate.format(myDate);
 
-    //Locators
-    @FindBy(id = "btnAddShift")
-    public WebElement addShiftButton;
-    @FindBy(id = "StartTime")
-    public WebElement startTimeSelect;
-    @FindBy(id = "ddlLength")
-    public WebElement shiftLengthSelect;
-    @FindBy(id = "capacity")
-    public WebElement shiftCapacityArea;
-    @FindBy(id = "0_1")
-    public WebElement tdtr1;
-    @FindBy(css = ".btnOk.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only")
-    public WebElement saveButton;
 
     public void openPage(){
         Driver.getWebdriver().get(url);
+        System.out.print("THIS IS THE DATE: " + url );
     }
 
     public void checkIfCapacityShiftActive(){

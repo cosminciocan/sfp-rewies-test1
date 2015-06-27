@@ -24,7 +24,7 @@ public class HomepageSteps extends TestBase {
 
     @Then("^I should be logged in$")
     public void I_should_be_logged_in() throws Throwable {
-        Assert.assertTrue(isTextPresent("Cosmin Ciocan"));
+        Assert.assertTrue(isTextPresent(volunteerName));
     }
 
 
