@@ -26,6 +26,7 @@ public class Constant {
     public static final String processingCenterID = "5072";
     public static final String capacityDuration = "8"; //This should be a number (3-8)
     public static final String processingCenterName = "ATPC";
+    public static final String groupName = "ATGroupName";
 
 
     //time now value
@@ -46,6 +47,8 @@ public class Constant {
     public WebElement expandNameMenu;
     @FindBy(linkText = "SIGN OUT")
     public WebElement signOutButton;
+    @FindBy(className = "menuButton")
+    public WebElement menuButton;
 
 //      Edit Capacity Shift Page
     @FindBy(id = "btnAddShift")
@@ -102,6 +105,24 @@ public class Constant {
     public WebElement groupSizeSaveButton;
     @FindBy(className = "displayModifySizeClass")
     public WebElement groupSizeNotEditable;
+    @FindBy(id = "gotoGroupMember")
+    public WebElement addViewGroupMembers;
+    @FindBy(id = "addGroupMember")
+    public WebElement inviteGroupMembersButton;
+    @FindBy(id = "memberList")
+    public WebElement membersListTable;
+    @FindBy(css = ".ui-dialog.ui-widget.ui-widget-content.ui-corner-all.dialogMobile.ui-draggable")
+    public WebElement addGroupNameDiv;
+    @FindBy(id = "GroupName")
+    public WebElement groupNameField;
+    @FindBy(id = "replaceReservationID")
+    public WebElement saveGroupName;
+    @FindBy(css = ".groupCentered .groupName")
+    public WebElement groupInfoDiv;
+    @FindBy(css =".buttonDialog .button")
+    public WebElement deleteGroupNameButton;
+    @FindBy(css = ".ui-dialog[aria-labelledby='ui-dialog-title-1'] .btnOk .ui-button-text")
+    public WebElement confirmGroupNameDeletionButton;
 
 
 }

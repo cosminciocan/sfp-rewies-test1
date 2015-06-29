@@ -11,11 +11,12 @@ import pages.MakeReservationPage;
 import pages.ManageReservationsPage;
 import webdriver.Driver;
 
+import static junit.framework.Assert.*;
+
 
 public class ManageReservationsSteps extends TestBase{
     protected ManageReservationsPage manageReservationsPage;
     protected MakeReservationPage makeReservation;
-
 
     public ManageReservationsSteps(){
         manageReservationsPage = PageFactory.initElements(Driver.getWebdriver(), ManageReservationsPage.class);
@@ -39,13 +40,11 @@ public class ManageReservationsSteps extends TestBase{
 
         }else
             System.out.println("There are active reservation on the Manage Reservation page.");
-
-
     }
 
     @Then("^I can see the reservations my user has$")
     public void I_can_see_the_reservations_my_user_has() throws Throwable {
-        Assert.assertTrue(manageReservationsPage.reservationsActive());
+        assertTrue(manageReservationsPage.reservationsActive());
     }
 
     @Then("^I select to cancel all the active reservations$")
@@ -61,5 +60,35 @@ public class ManageReservationsSteps extends TestBase{
     @Then("^The new value is saved$")
     public void The_new_value_is_saved() throws Throwable {
         manageReservationsPage.isGroupSizeValid();
+    }
+
+    @When("^I click on the Add/View Group Members Link$")
+    public void I_click_on_the_Add_View_Group_Members_Link() throws Throwable {
+        manageReservationsPage.goToGroupListPage();
+    }
+
+    @Then("^I should be re-directed to the Add/View Group Members page$")
+    public void I_should_be_re_directed_to_the_Add_View_Group_Members_page() throws Throwable {
+        manageReservationsPage.checkGroupMembersPage();
+    }
+
+    @When("^I click on Add Organization/Group Name link$")
+    public void I_click_on_Add_Organization_Group_Name_link() throws Throwable {
+        manageReservationsPage.openGroupName();
+    }
+
+    @And("^I can add and save a Group Name$")
+    public void I_can_add_and_save_a_Group_Name() throws Throwable {
+        manageReservationsPage.addGroupName();
+    }
+
+    @Then("^The name is saved$")
+    public void The_name_is_saved() throws Throwable {
+        manageReservationsPage.checkSavedGroupName();
+    }
+
+    @And("^I can choose to change or delete it$")
+    public void I_can_choose_to_change_or_delete_it() throws Throwable {
+        manageReservationsPage.deleteGroupName();
     }
 }

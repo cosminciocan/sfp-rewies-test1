@@ -3,7 +3,12 @@ package pages;
 
 import Utils.TestBase;
 import junit.framework.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import webdriver.Driver;
+
+import static junit.framework.Assert.*;
 
 public class ManageReservationsPage extends TestBase {
 
@@ -19,12 +24,12 @@ public class ManageReservationsPage extends TestBase {
         boolean reservationsActive = true;
         waitForElement(manageMakeReservation, defaultTimeOut);
         for(int i = 0; !isElementPresent(reservationDivs); i++){
-            if(i == 3 && !isElementPresent(reservationDivs)){
+            if(i == 10 && !isElementPresent(reservationDivs)){
                 System.out.println("There are no active reservations!");
                 reservationsActive = false;
                 break;
             }
-            Sleep(1);
+            Sleep(0.1);
         }
         return reservationsActive;
     }
@@ -60,9 +65,47 @@ public class ManageReservationsPage extends TestBase {
 
     public void isGroupSizeValid(){
         waitForElement(groupSizeNotEditable, defaultTimeOut);
-        Assert.assertTrue(elementContainsText(groupSizeNotEditable, groupSize));
+        assertTrue(elementContainsText(groupSizeNotEditable, groupSize));
     }
 
+    public void checkGroupMembersPage(){
+        assertTrue(isTextPresent("Group Members"));
+        assertTrue(isTextPresent(simpleDate.format(myDate)));
+        assertTrue(isElementPresent(membersListTable));
+    }
 
+    public void goToGroupListPage(){
+        waitForElement(addViewGroupMembers,defaultTimeOut);
+        addViewGroupMembers.click();
+        waitForElement(inviteGroupMembersButton,defaultTimeOut);
+    }
 
+    public void openGroupName(){
+        WebElement groupName = driver.findElement(By.id(simpleDate.format(myDate) + " 12:00:00 AM"));
+        waitForElement(groupName,defaultTimeOut);
+        groupName.click();
+        waitForElement(addGroupNameDiv,defaultTimeOut);
+    }
+
+    public void addGroupName(){
+        waitForElement(groupNameField,defaultTimeOut);
+        groupNameField.clear();
+        groupNameField.sendKeys(groupName);
+        saveGroupName.click();
+    }
+
+    public void checkSavedGroupName(){
+        waitForElement(reservationDivs, defaultTimeOut);
+        waitForElement(groupInfoDiv, defaultTimeOut);
+        assertTrue(elementContainsText(groupInfoDiv, groupName));
+    }
+
+    public void deleteGroupName(){
+        openGroupName();
+        deleteGroupNameButton.click();
+        waitForElement(saveGroupName,defaultTimeOut);
+        confirmGroupNameDeletionButton.click();
+        waitForElement(groupInfoDiv, defaultTimeOut);
+        assertFalse(elementContainsText(groupInfoDiv, groupName));
+    }
 }

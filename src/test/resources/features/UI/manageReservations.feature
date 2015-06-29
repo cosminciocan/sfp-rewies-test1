@@ -20,3 +20,14 @@ Feature: Manage reservations feature
     Then The new value is saved
     And I log out
 
+  Scenario: The user clicks on the Add/View Group Members link
+    When I click on the Add/View Group Members Link
+    Then I should be re-directed to the Add/View Group Members page
+    And I log out
+
+  Scenario: The user clicks on 'Add Organization/Group Name' link
+    When I click on Add Organization/Group Name link
+    And I can add and save a Group Name
+    Then The name is saved
+    And I can choose to change or delete it
+    And I log out

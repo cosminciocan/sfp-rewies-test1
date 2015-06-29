@@ -36,6 +36,7 @@ public class HomepageSteps extends TestBase {
 
     @Given("^I access the \"([^\"]*)\" site$")
     public void I_access_the_site(String site) throws Throwable {
+        homepage.checkIfLoggedIn();
         boolean fail = false;
         switch (site.toLowerCase()){
             case "ui": homepage.openUIPage();

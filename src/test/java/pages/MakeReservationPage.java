@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import webdriver.Driver;
 
-import java.util.NoSuchElementException;
+import static junit.framework.Assert.*;
 
 
 public class MakeReservationPage extends TestBase{
@@ -40,9 +40,9 @@ public class MakeReservationPage extends TestBase{
 
     public void checkReservationDetails(){
         waitForElement(reservationDate, defaultTimeOut);
-        Assert.assertTrue(elementContainsText(congratulateDiv, "Congratulations!"));
-//        The date format is DD/m/yyyy. After september needs to be changed to: DD/mm/yyyy
-        Assert.assertTrue(elementContainsText(reservationDate, simpleDate.format(myDate)));
+        assertTrue(elementContainsText(congratulateDiv, "Congratulations!"));
+//        The date format is M/dd/yyyy. After september needs to be changed to: MM/dd/yyyy
+        assertTrue(elementContainsText(reservationDate, simpleDate.format(myDate)));
         waitForElement(closeConfirmationDiv, defaultTimeOut);
         closeConfirmationDiv.click();
         waitForElement(table,defaultTimeOut);
@@ -50,6 +50,8 @@ public class MakeReservationPage extends TestBase{
 
     public void searchForCurrentReservation(){
         int row = 2; // first table row
+        boolean found;
+        int count = 0; //Count needed for checking the Make Reservation button
         boolean foundReservationDetails = false;
         waitForElement(makeReservationButton,defaultTimeOut);
         do{
@@ -61,13 +63,23 @@ public class MakeReservationPage extends TestBase{
                 System.out.println("This is the row number " + row);
                 WebElement makeReservationButton = driver.findElement(By.cssSelector(".ui-jqgrid-btable tr:nth-child("+row+") .button.actionButton1"));
                 waitForElement(makeReservationButton,defaultTimeOut);
-                //        TODO: Refactor this to remove the sleep
-                Sleep(1);
-                makeReservationButton.click();
-            }
-            row++;
+                do {
+                    try {
+                        makeReservationButton.click();
+                        found = true;
+                    } catch (Exception e) {
+                        found = false;
+                        Sleep(0.1);
+                    }
+                    if (count == 10){
+                        System.err.println("The element was not found!");
+                        System.exit(1);
+                        break;
+                    }
+                    count++;
+                } while(!found);
+                }row++;
         }while(!foundReservationDetails);
     }
-
 
 }

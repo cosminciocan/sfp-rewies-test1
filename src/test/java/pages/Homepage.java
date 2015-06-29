@@ -36,4 +36,10 @@ public class Homepage extends TestBase{
         Driver.getWebdriver().get(logOutUrl);
     }
 
+    public void checkIfLoggedIn(){
+        if(isElementPresent(menuButton)){
+            logOut();
+        }
+    }
+
 }

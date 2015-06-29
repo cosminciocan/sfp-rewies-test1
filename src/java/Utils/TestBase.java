@@ -36,9 +36,26 @@ public abstract class TestBase extends Constant {
         }
     }
 
-    public WebElement waitForElement(WebElement name, int timeOut) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOut);
-        return wait.until(ExpectedConditions.visibilityOf(name));
+    public void waitForElement(WebElement element, int timeOutSeconds) {
+//        WebDriverWait wait = new WebDriverWait(driver, timeOut);
+//        return wait.until(ExpectedConditions.visibilityOf(name));
+        int timeOutLimit = timeOutSeconds * 1000;
+        int timeOutTime = 0;
+        boolean present = false;
+        while(!isElementPresent(element)){
+            try {
+                Thread.sleep(100);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            timeOutTime = timeOutTime + 100;
+            if(timeOutTime == timeOutLimit){
+                System.err.println("Timed out while waiting for the element!");
+                present = true;
+                break;
+            }
+        }
+        Assert.assertFalse(present);
     }
 
 //  This method returns a boolean value if the element is found/not found
@@ -49,7 +66,7 @@ public abstract class TestBase extends Constant {
 
         try {
             webelement.getTagName();
-//           webelement.isDisplayed();
+            webelement.isDisplayed();
             exists = true;
 
         } catch (Throwable e) {
@@ -78,16 +95,19 @@ public abstract class TestBase extends Constant {
         return sd.format(d);
     }
 
-    public void Sleep(int seconds){
-        int milliseconds = seconds * 1000;
+    public void Sleep(double seconds){
+        double milliseconds = seconds * 1000;
         try {
-            Thread.sleep(milliseconds);
+            Thread.sleep((long) milliseconds);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
     public boolean isTextPresent(String text) {
+        while(isAlertPresent()){
+            driver.switchTo().alert().accept();
+        }
         if (Driver.getWebdriver().getPageSource().contains(text)) {
             System.out.println("Text found");
             return true;
@@ -98,6 +118,7 @@ public abstract class TestBase extends Constant {
     }
 
     public boolean elementContainsText(WebElement e, String text){
+        waitForElement(e,defaultTimeOut);
         String pageText = e.getText();
         if  (pageText.contains(text)){
            System.out.println("Text found!");
