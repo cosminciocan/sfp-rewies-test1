@@ -24,6 +24,9 @@ public class Constant {
     public static final int defaultTimeOut = 5;
     public static final String volunteerName = "Automation Testing";
     public static final String processingCenterID = "5072";
+    public static final String capacityDuration = "8"; //This should be a number (3-8)
+    public static final String processingCenterName = "ATPC";
+
 
     //time now value
 //    public static java.util.Date date = new Date();

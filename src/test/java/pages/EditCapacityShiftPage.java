@@ -17,7 +17,6 @@ public class EditCapacityShiftPage extends TestBase {
 
     public void openPage(){
         Driver.getWebdriver().get(url);
-        System.out.print("THIS IS THE DATE: " + url );
     }
 
     public void checkIfCapacityShiftActive(){
@@ -34,7 +33,7 @@ public class EditCapacityShiftPage extends TestBase {
         waitForElement(saveButton,defaultTimeOut);
 //        TODO: Refactor this because it does not take the given value
 //        startTimeSelect.sendKeys("12:00pm");
-        shiftLengthSelect.sendKeys("8");
+        shiftLengthSelect.sendKeys(capacityDuration);
         shiftCapacityArea.sendKeys(capacityShiftValue);
         saveButton.click();
     }

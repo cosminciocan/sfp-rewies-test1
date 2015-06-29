@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import webdriver.Driver;
 
+import java.util.NoSuchElementException;
+
 
 public class MakeReservationPage extends TestBase{
 
@@ -33,15 +35,11 @@ public class MakeReservationPage extends TestBase{
 
     public void check_list_loaded(){
         waitForElement(table, defaultTimeOut);
-        searchForCurrentReservation();
-        waitForElement(makeReservationButton,defaultTimeOut);
     }
 
     public void makeReservation(){
 //        TODO: Refactor this to remove the sleep
-
-        Sleep(1);
-        makeReservationButton.click();
+        searchForCurrentReservation();
         waitForElement(confirmationDiv, defaultTimeOut);
     }
 
@@ -56,11 +54,15 @@ public class MakeReservationPage extends TestBase{
         int row = 2; // first table row
         boolean foundReservationDetails = false;
         do{
-            String tableRowText = driver.findElement(By.cssSelector(".ui-jqgrid-btable tr:nth-child(" + row + ")")).getText();
-            if (tableRowText.contains(myDate.toString())){
+            System.out.println("Checking the table rows...");
+            String tableRowText = driver.findElement(By.cssSelector(".ui-jqgrid-btable tr:nth-child("+row+")")).getText();
+            if (tableRowText.contains(simpleDate.format(myDate)) && tableRowText.contains(capacityDuration + " hours")
+                && tableRowText.contains(processingCenterName)){
                 foundReservationDetails = true;
-                row++;
+                System.out.println("This is the row number " + row);
+                driver.findElement(By.cssSelector(".ui-jqgrid-btable tr:nth-child("+row+") .button.actionButton1")).click();
             }
+            row++;
         }while(!foundReservationDetails);
     }
 

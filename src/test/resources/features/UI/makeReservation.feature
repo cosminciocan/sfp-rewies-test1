@@ -13,3 +13,4 @@
       Then I should see the list of available reservations
       And I choose to make a reservation
       Then the details of my reservation are saved
+      And I log out
