@@ -11,17 +11,15 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import webdriver.Driver;
 
+import java.util.Base64;
+
 
 public class Homepage extends TestBase{
 
     // URL
     public static String url = BaseURL;
     public static String urlStaff = StaffURL;
-
-    // LOCATORS
-    @FindBy(linkText = "SIGN OUT")
-    public WebElement signOutButton;
-
+    public static String logOutUrl = BaseURL + "/Account/LogOff";
 
 
     // METHODS
@@ -35,10 +33,7 @@ public class Homepage extends TestBase{
     }
 
     public void logOut(){
-        waitForElement(expandNameMenu, defaultTimeOut);
-        expandNameMenu.click();
-        waitForElement(signOutButton, defaultTimeOut);
-        signOutButton.click();
+        Driver.getWebdriver().get(logOutUrl);
     }
 
 }

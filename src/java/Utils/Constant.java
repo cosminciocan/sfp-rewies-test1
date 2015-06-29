@@ -44,6 +44,8 @@ public class Constant {
 //    Header
     @FindBy(css = ".welcomeText .userName.hideMobile")
     public WebElement expandNameMenu;
+    @FindBy(linkText = "SIGN OUT")
+    public WebElement signOutButton;
 
 //      Edit Capacity Shift Page
     @FindBy(id = "btnAddShift")
@@ -78,8 +80,8 @@ public class Constant {
     public WebElement confirmationDiv;
     @FindBy(css = ".resLocation .date")
     public WebElement reservationDate;
-
-
+    @FindBy(css = ".ui-icon.ui-icon-closethick")
+    public WebElement closeConfirmationDiv;
 
 //    Manage reservation page
     @FindBy(id = "searchReservations")

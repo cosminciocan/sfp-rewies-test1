@@ -15,10 +15,6 @@ public class MakeReservationPage extends TestBase{
 //    URL
     private static String url = BaseURL + "/ReservationWizard";
 
-//    Locators
-
-
-
 
 //    Methods
     public void openPage(){
@@ -38,7 +34,6 @@ public class MakeReservationPage extends TestBase{
     }
 
     public void makeReservation(){
-//        TODO: Refactor this to remove the sleep
         searchForCurrentReservation();
         waitForElement(confirmationDiv, defaultTimeOut);
     }
@@ -48,11 +43,15 @@ public class MakeReservationPage extends TestBase{
         Assert.assertTrue(elementContainsText(congratulateDiv, "Congratulations!"));
 //        The date format is DD/m/yyyy. After september needs to be changed to: DD/mm/yyyy
         Assert.assertTrue(elementContainsText(reservationDate, simpleDate.format(myDate)));
+        waitForElement(closeConfirmationDiv, defaultTimeOut);
+        closeConfirmationDiv.click();
+        waitForElement(table,defaultTimeOut);
     }
 
     public void searchForCurrentReservation(){
         int row = 2; // first table row
         boolean foundReservationDetails = false;
+        waitForElement(makeReservationButton,defaultTimeOut);
         do{
             System.out.println("Checking the table rows...");
             String tableRowText = driver.findElement(By.cssSelector(".ui-jqgrid-btable tr:nth-child("+row+")")).getText();
@@ -60,7 +59,11 @@ public class MakeReservationPage extends TestBase{
                 && tableRowText.contains(processingCenterName)){
                 foundReservationDetails = true;
                 System.out.println("This is the row number " + row);
-                driver.findElement(By.cssSelector(".ui-jqgrid-btable tr:nth-child("+row+") .button.actionButton1")).click();
+                WebElement makeReservationButton = driver.findElement(By.cssSelector(".ui-jqgrid-btable tr:nth-child("+row+") .button.actionButton1"));
+                waitForElement(makeReservationButton,defaultTimeOut);
+                //        TODO: Refactor this to remove the sleep
+                Sleep(1);
+                makeReservationButton.click();
             }
             row++;
         }while(!foundReservationDetails);
