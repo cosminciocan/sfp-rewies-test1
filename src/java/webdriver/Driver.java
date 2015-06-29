@@ -11,7 +11,7 @@ public class Driver {
 
     public static void initWebdriver() {
 //        driver = new FirefoxDriver(); // for Firefox
-        System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriver.exe");
         driver = new ChromeDriver(); // For chrome
         System.out.println("Starting browser");
         driver.manage().window().maximize();
