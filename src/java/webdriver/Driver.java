@@ -4,15 +4,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class Driver {
 
     private static WebDriver driver;
 
-    public static void initWebdriver() {
+    public static void initWebdriver() throws InterruptedException {
 //        driver = new FirefoxDriver(); // for Firefox
         System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriver.exe");
         driver = new ChromeDriver(); // For chrome
+        TimeUnit.SECONDS.sleep(1);
         System.out.println("Starting browser");
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
