@@ -1,7 +1,6 @@
 package Utils;
 
 import org.apache.commons.lang3.time.DateUtils;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
