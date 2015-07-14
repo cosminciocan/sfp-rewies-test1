@@ -22,6 +22,7 @@ public class LoginWindow implements Runnable {
         //wait - increase this wait period if required
         Thread.sleep(1000);
 
+
         //create robot for keyboard operations
         Robot rb = new Robot();
 
@@ -33,10 +34,12 @@ public class LoginWindow implements Runnable {
         rb.keyRelease(KeyEvent.VK_V);
         rb.keyRelease(KeyEvent.VK_CONTROL);
 
+
         //tab to password entry field
         rb.keyPress(KeyEvent.VK_TAB);
         rb.keyRelease(KeyEvent.VK_TAB);
         Thread.sleep(1000);
+
 
         //Enter password by ctrl-v
         StringSelection pwd = new StringSelection("Passw0rd.1");
@@ -45,6 +48,7 @@ public class LoginWindow implements Runnable {
         rb.keyPress(KeyEvent.VK_V);
         rb.keyRelease(KeyEvent.VK_V);
         rb.keyRelease(KeyEvent.VK_CONTROL);
+
 
         //press enter
         rb.keyPress(KeyEvent.VK_ENTER);

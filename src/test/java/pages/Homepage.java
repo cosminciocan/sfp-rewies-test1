@@ -1,6 +1,5 @@
 package pages;
 
-import Utils.LoginWindow;
 import Utils.TestBase;
 import webdriver.Driver;
 
@@ -17,8 +16,6 @@ public class Homepage extends TestBase{
     }
 
     public void openPage(){
-//        This needs to be commented if tests are run in Chrome
-        (new Thread(new LoginWindow())).start();
         Driver.getWebdriver().get(StaffURL);
     }
 

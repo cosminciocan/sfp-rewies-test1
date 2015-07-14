@@ -1,5 +1,6 @@
 package steps;
 
+import Utils.LoginWindow;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -46,7 +47,10 @@ public class HomepageSteps extends TestBase {
             case "ui": homepage.openUIPage();
                 loginPage.volunteerLogin();
                 break;
-            case "staff": homepage.openPage();
+            case "staff":
+                //        This needs to be commented if tests are run in Chrome
+                (new Thread(new LoginWindow())).start();
+                homepage.openPage();
                 break;
             default: fail = true;
                 break;
