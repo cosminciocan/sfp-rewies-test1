@@ -10,6 +10,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import webdriver.Driver;
+import webdriver.LoginWindow;
 
 import java.util.Base64;
 
@@ -17,19 +18,20 @@ import java.util.Base64;
 public class Homepage extends TestBase{
 
     // URL
-    public static String url = BaseURL;
-    public static String urlStaff = StaffURL;
     public static String logOutUrl = BaseURL + logOutPath;
 
 
     // METHODS
     public void openUIPage(){
-        openUrl(url);
+        openUrl(BaseURL);
     }
 
 
+
     public void openPage(){
-        Driver.getWebdriver().get(urlStaff);
+//        This needs to be commented if tests are run in Chrome
+        (new Thread(new LoginWindow())).start();
+        Driver.getWebdriver().get(StaffURL);
     }
 
     public void logOut(){
@@ -41,4 +43,7 @@ public class Homepage extends TestBase{
             logOut();
         }
     }
+
+
 }
+

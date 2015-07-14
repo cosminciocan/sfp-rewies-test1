@@ -40,14 +40,14 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 10153676256,
+  "duration": 5387741681,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateCapacityShiftSteps.I_create_a_capacity_shift()"
 });
 formatter.result({
-  "duration": 1651479432,
+  "duration": 772718085,
   "status": "passed"
 });
 formatter.uri("UI/ManageWaitList.feature");
@@ -101,28 +101,28 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 4060056403,
+  "duration": 5536983234,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageWaitListSteps.I_navigate_to_the_Wai_List_Requests_page()"
 });
 formatter.result({
-  "duration": 508177792,
+  "duration": 266997658,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageWaitListSteps.I_check_if_there_are_any_waiting_list_requests_and_if_not_I_create_one()"
 });
 formatter.result({
-  "duration": 96468027,
+  "duration": 104556604,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageWaitListSteps.I_navigate_to_the_Wai_List_Requests_page()"
 });
 formatter.result({
-  "duration": 219223733,
+  "duration": 287944664,
   "status": "passed"
 });
 formatter.scenario({
@@ -166,21 +166,21 @@ formatter.match({
   "location": "ManageWaitListSteps.Edit_Wait_list_modal_window_will_be_visible()"
 });
 formatter.result({
-  "duration": 479368404,
+  "duration": 386210417,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageWaitListSteps.I_can_modify_the_request_group_size()"
 });
 formatter.result({
-  "duration": 659414844,
+  "duration": 655699783,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 419224365,
+  "duration": 440507705,
   "status": "passed"
 });
 formatter.background({
@@ -220,28 +220,28 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1444710292,
+  "duration": 1602361754,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageWaitListSteps.I_navigate_to_the_Wai_List_Requests_page()"
 });
 formatter.result({
-  "duration": 277804139,
+  "duration": 241190794,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageWaitListSteps.I_check_if_there_are_any_waiting_list_requests_and_if_not_I_create_one()"
 });
 formatter.result({
-  "duration": 114311058,
+  "duration": 107246086,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageWaitListSteps.I_navigate_to_the_Wai_List_Requests_page()"
 });
 formatter.result({
-  "duration": 234422679,
+  "duration": 217173759,
   "status": "passed"
 });
 formatter.scenario({
@@ -271,21 +271,21 @@ formatter.match({
   "location": "ManageWaitListSteps.I_delete_all_the_wait_list_requests()"
 });
 formatter.result({
-  "duration": 1463353495,
+  "duration": 1538181716,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageWaitListSteps.A_message_informing_the_user_about_no_wait_list_found_will_be_visible()"
 });
 formatter.result({
-  "duration": 64628087,
+  "duration": 59448476,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 260844970,
+  "duration": 266381047,
   "status": "passed"
 });
 formatter.uri("UI/homepage.feature");
@@ -335,21 +335,21 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1386271209,
+  "duration": 1453785762,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_should_be_logged_in()"
 });
 formatter.result({
-  "duration": 37859594,
+  "duration": 34952207,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 260444687,
+  "duration": 312140524,
   "status": "passed"
 });
 formatter.scenario({
@@ -396,28 +396,28 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1335266197,
+  "duration": 2069258590,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_should_be_logged_in()"
 });
 formatter.result({
-  "duration": 26612958,
+  "duration": 81153417,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.I_navigate_to_the_contact_us_page()"
 });
 formatter.result({
-  "duration": 561191331,
+  "duration": 707623001,
   "status": "passed"
 });
 formatter.match({
   "location": "ContactUsSteps.I_complete_the_form_and_I_submit_it()"
 });
 formatter.result({
-  "duration": 1265739961,
+  "duration": 1681143470,
   "status": "passed"
 });
 formatter.uri("UI/makeReservation.feature");
@@ -471,14 +471,14 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 565710907,
+  "duration": 641493256,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateCapacityShiftSteps.I_create_a_capacity_shift()"
 });
 formatter.result({
-  "duration": 450831398,
+  "duration": 502106425,
   "status": "passed"
 });
 formatter.match({
@@ -491,14 +491,14 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1494622616,
+  "duration": 2170553316,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_should_be_logged_in()"
 });
 formatter.result({
-  "duration": 209505598,
+  "duration": 26635854,
   "status": "passed"
 });
 formatter.scenario({
@@ -543,42 +543,42 @@ formatter.match({
   "location": "MakeReservationSteps.I_navigate_to_the_Make_a_Reservation_page()"
 });
 formatter.result({
-  "duration": 1104530551,
+  "duration": 334104031,
   "status": "passed"
 });
 formatter.match({
   "location": "MakeReservationSteps.I_fill_in_the_details()"
 });
 formatter.result({
-  "duration": 782598467,
+  "duration": 811932092,
   "status": "passed"
 });
 formatter.match({
   "location": "MakeReservationSteps.I_should_see_the_list_of_available_reservations()"
 });
 formatter.result({
-  "duration": 75720767,
+  "duration": 84327661,
   "status": "passed"
 });
 formatter.match({
   "location": "MakeReservationSteps.I_choose_to_make_a_reservation()"
 });
 formatter.result({
-  "duration": 737412176,
+  "duration": 656257574,
   "status": "passed"
 });
 formatter.match({
   "location": "MakeReservationSteps.the_details_of_my_reservation_are_saved()"
 });
 formatter.result({
-  "duration": 490617014,
+  "duration": 497920024,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 326782862,
+  "duration": 377170869,
   "status": "passed"
 });
 formatter.background({
@@ -618,14 +618,14 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 219719943,
+  "duration": 209470859,
   "status": "passed"
 });
 formatter.match({
   "location": "CreateCapacityShiftSteps.I_create_a_capacity_shift()"
 });
 formatter.result({
-  "duration": 430201381,
+  "duration": 445720081,
   "status": "passed"
 });
 formatter.match({
@@ -638,14 +638,14 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1400473787,
+  "duration": 1703063553,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_should_be_logged_in()"
 });
 formatter.result({
-  "duration": 269279355,
+  "duration": 26803626,
   "status": "passed"
 });
 formatter.scenario({
@@ -685,35 +685,35 @@ formatter.match({
   "location": "MakeReservationSteps.I_navigate_to_the_Make_a_Reservation_page()"
 });
 formatter.result({
-  "duration": 518172259,
+  "duration": 1418955535,
   "status": "passed"
 });
 formatter.match({
   "location": "MakeReservationSteps.I_fill_in_the_details()"
 });
 formatter.result({
-  "duration": 812557388,
+  "duration": 1166764041,
   "status": "passed"
 });
 formatter.match({
   "location": "MakeReservationSteps.I_should_see_the_list_of_available_reservations()"
 });
 formatter.result({
-  "duration": 77933777,
+  "duration": 56265154,
   "status": "passed"
 });
 formatter.match({
   "location": "MakeReservationSteps.I_choose_to_make_a_reservation_for_a_higher_number_than_available()"
 });
 formatter.result({
-  "duration": 339271799,
+  "duration": 269559632,
   "status": "passed"
 });
 formatter.match({
   "location": "MakeReservationSteps.I_can_choose_to_add_my_group_to_the_waiting_list()"
 });
 formatter.result({
-  "duration": 951419192,
+  "duration": 950436246,
   "status": "passed"
 });
 formatter.uri("UI/manageReservations.feature");
@@ -762,21 +762,21 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1730074427,
+  "duration": 2132512133,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_navigate_to_the_Manage_Reservations_page()"
 });
 formatter.result({
-  "duration": 394677961,
+  "duration": 246834639,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_check_if_there_are_any_reservations_created_and_if_not_I_create_one()"
 });
 formatter.result({
-  "duration": 288884187,
+  "duration": 574562945,
   "status": "passed"
 });
 formatter.scenario({
@@ -801,14 +801,14 @@ formatter.match({
   "location": "ManageReservationsSteps.I_can_see_the_reservations_my_user_has()"
 });
 formatter.result({
-  "duration": 56353184,
+  "duration": 91735676,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 287049354,
+  "duration": 273522601,
   "status": "passed"
 });
 formatter.background({
@@ -843,21 +843,21 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1378992675,
+  "duration": 1552587594,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_navigate_to_the_Manage_Reservations_page()"
 });
 formatter.result({
-  "duration": 378424224,
+  "duration": 565322071,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_check_if_there_are_any_reservations_created_and_if_not_I_create_one()"
 });
 formatter.result({
-  "duration": 274061444,
+  "duration": 411797401,
   "status": "passed"
 });
 formatter.scenario({
@@ -887,21 +887,21 @@ formatter.match({
   "location": "ManageReservationsSteps.I_choose_to_modify_the_group_size()"
 });
 formatter.result({
-  "duration": 1149967117,
+  "duration": 1080887351,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.The_new_value_is_saved()"
 });
 formatter.result({
-  "duration": 826749703,
+  "duration": 837989627,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 275617183,
+  "duration": 280334533,
   "status": "passed"
 });
 formatter.background({
@@ -936,21 +936,21 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1346602442,
+  "duration": 3239941781,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_navigate_to_the_Manage_Reservations_page()"
 });
 formatter.result({
-  "duration": 397366258,
+  "duration": 378493701,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_check_if_there_are_any_reservations_created_and_if_not_I_create_one()"
 });
 formatter.result({
-  "duration": 332899626,
+  "duration": 308934700,
   "status": "passed"
 });
 formatter.scenario({
@@ -980,21 +980,21 @@ formatter.match({
   "location": "ManageReservationsSteps.I_click_on_the_Add_View_Group_Members_Link()"
 });
 formatter.result({
-  "duration": 1189980507,
+  "duration": 882271134,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_should_be_re_directed_to_the_Add_View_Group_Members_page()"
 });
 formatter.result({
-  "duration": 67443496,
+  "duration": 67149007,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 250443115,
+  "duration": 247481646,
   "status": "passed"
 });
 formatter.background({
@@ -1029,21 +1029,21 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1333218986,
+  "duration": 1490759520,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_navigate_to_the_Manage_Reservations_page()"
 });
 formatter.result({
-  "duration": 415039148,
+  "duration": 386292526,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_check_if_there_are_any_reservations_created_and_if_not_I_create_one()"
 });
 formatter.result({
-  "duration": 353074884,
+  "duration": 295527953,
   "status": "passed"
 });
 formatter.scenario({
@@ -1083,35 +1083,35 @@ formatter.match({
   "location": "ManageReservationsSteps.I_click_on_Add_Organization_Group_Name_link()"
 });
 formatter.result({
-  "duration": 394160829,
+  "duration": 351892190,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_can_add_and_save_a_Group_Name()"
 });
 formatter.result({
-  "duration": 326135460,
+  "duration": 352741708,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.The_name_is_saved()"
 });
 formatter.result({
-  "duration": 397429419,
+  "duration": 385593806,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_can_choose_to_change_or_delete_it()"
 });
 formatter.result({
-  "duration": 940730743,
+  "duration": 1437549788,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 253697494,
+  "duration": 401754380,
   "status": "passed"
 });
 formatter.background({
@@ -1146,21 +1146,21 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1369674428,
+  "duration": 1719376504,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_navigate_to_the_Manage_Reservations_page()"
 });
 formatter.result({
-  "duration": 430658115,
+  "duration": 518756894,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_check_if_there_are_any_reservations_created_and_if_not_I_create_one()"
 });
 formatter.result({
-  "duration": 307419226,
+  "duration": 985547145,
   "status": "passed"
 });
 formatter.scenario({
@@ -1204,21 +1204,21 @@ formatter.match({
   "location": "ManageReservationsSteps.I_click_on_the_Modify_Reservation_Date_Time_button()"
 });
 formatter.result({
-  "duration": 139446835,
+  "duration": 373682004,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_can_modify_the_reservation_Date_or_Time()"
 });
 formatter.result({
-  "duration": 1326980241,
+  "duration": 1618915112,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 369791671,
+  "duration": 348885324,
   "status": "passed"
 });
 formatter.background({
@@ -1253,21 +1253,21 @@ formatter.match({
   "location": "HomepageSteps.I_access_the_site(String)"
 });
 formatter.result({
-  "duration": 1433856834,
+  "duration": 1681508225,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_navigate_to_the_Manage_Reservations_page()"
 });
 formatter.result({
-  "duration": 470135426,
+  "duration": 521422689,
   "status": "passed"
 });
 formatter.match({
   "location": "ManageReservationsSteps.I_check_if_there_are_any_reservations_created_and_if_not_I_create_one()"
 });
 formatter.result({
-  "duration": 277217529,
+  "duration": 278332324,
   "status": "passed"
 });
 formatter.scenario({
@@ -1292,14 +1292,14 @@ formatter.match({
   "location": "ManageReservationsSteps.I_select_to_cancel_all_the_active_reservations()"
 });
 formatter.result({
-  "duration": 2835520816,
+  "duration": 1757494665,
   "status": "passed"
 });
 formatter.match({
   "location": "HomepageSteps.I_log_out()"
 });
 formatter.result({
-  "duration": 256220783,
+  "duration": 357194965,
   "status": "passed"
 });
 });

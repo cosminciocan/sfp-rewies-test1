@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="13" time="62.493906">
-<testcase classname="Create capacity shift" name="Create a capacity shift" time="11.805156">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="13" time="64.996527">
+<testcase classname="Create capacity shift" name="Create a capacity shift" time="6.16046">
 <system-out><![CDATA[Given I access the "staff" site.............................................passed
 And I create a capacity shift...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Managing the waiting list" name="The user clicks on Edit button for a reservation." time="6.441934">
+<testcase classname="Managing the waiting list" name="The user clicks on Edit button for a reservation." time="7.6789">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 When I navigate to the Wai List Requests page...............................passed
 Then I check if there are any waiting list requests, and if not I create one.passed
@@ -14,7 +14,7 @@ Then I can modify the request group size....................................pass
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Managing the waiting list" name="Delete all waiting list requests" time="3.860075">
+<testcase classname="Managing the waiting list" name="Delete all waiting list requests" time="4.031984">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 When I navigate to the Wai List Requests page...............................passed
 Then I check if there are any waiting list requests, and if not I create one.passed
@@ -24,20 +24,20 @@ Then A message informing the user about no wait list found will be visible..pass
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login Feature" name="Login to the UI site" time="1.684575">
+<testcase classname="Login Feature" name="Login to the UI site" time="1.800878">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 Then I should be logged in..................................................passed
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login Feature" name="User submits a Contact Us form" time="3.18881">
+<testcase classname="Login Feature" name="User submits a Contact Us form" time="4.539178">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 Then I should be logged in..................................................passed
 And I navigate to the contact us page.......................................passed
 And I complete the form and I submit it.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Making reservations tests" name="Make a reservation" time="6.238332">
+<testcase classname="Making reservations tests" name="Make a reservation" time="6.102501">
 <system-out><![CDATA[Given I access the "staff" site.............................................passed
 And I create a capacity shift...............................................passed
 Then I access the "ui" site.................................................passed
@@ -50,7 +50,7 @@ Then the details of my reservation are saved................................pass
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Making reservations tests" name="Add to waiting list" time="5.019029">
+<testcase classname="Making reservations tests" name="Add to waiting list" time="6.247039">
 <system-out><![CDATA[Given I access the "staff" site.............................................passed
 And I create a capacity shift...............................................passed
 Then I access the "ui" site.................................................passed
@@ -62,7 +62,7 @@ And I choose to make a reservation for a higher number than available.......pass
 When I can choose to add my group to the waiting list.......................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manage reservations feature" name="View my reservations" time="2.757039">
+<testcase classname="Manage reservations feature" name="View my reservations" time="3.319168">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 When I navigate to the Manage Reservations page.............................passed
 Then I check if there are any active reservations, and if not I create one..passed
@@ -70,7 +70,7 @@ Then I can see the reservations my user has.................................pass
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manage reservations feature" name="Modify group size" time="4.283812">
+<testcase classname="Manage reservations feature" name="Modify group size" time="4.728919">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 When I navigate to the Manage Reservations page.............................passed
 Then I check if there are any active reservations, and if not I create one..passed
@@ -79,7 +79,7 @@ Then The new value is saved.................................................pass
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manage reservations feature" name="The user clicks on the Add/View Group Members link" time="3.584735">
+<testcase classname="Manage reservations feature" name="The user clicks on the Add/View Group Members link" time="5.124272">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 When I navigate to the Manage Reservations page.............................passed
 Then I check if there are any active reservations, and if not I create one..passed
@@ -88,7 +88,7 @@ Then I should be re-directed to the Add/View Group Members page.............pass
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manage reservations feature" name="Modify group name" time="4.413487">
+<testcase classname="Manage reservations feature" name="Modify group name" time="5.102112">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 When I navigate to the Manage Reservations page.............................passed
 Then I check if there are any active reservations, and if not I create one..passed
@@ -99,7 +99,7 @@ And I can choose to change or delete it.....................................pass
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manage reservations feature" name="Modify reservation time and date" time="3.943971">
+<testcase classname="Manage reservations feature" name="Modify reservation time and date" time="5.565163">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 When I navigate to the Manage Reservations page.............................passed
 Then I check if there are any active reservations, and if not I create one..passed
@@ -108,7 +108,7 @@ Then I can modify the reservation Date or Time..............................pass
 And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Manage reservations feature" name="Cancel active reservations" time="5.272951">
+<testcase classname="Manage reservations feature" name="Cancel active reservations" time="4.595953">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 When I navigate to the Manage Reservations page.............................passed
 Then I check if there are any active reservations, and if not I create one..passed
