@@ -3,10 +3,8 @@ package Utils;
 import Utils.Constant;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.junit.internal.runners.statements.Fail;
+import org.openqa.selenium.*;
 import org.openqa.selenium.security.Credentials;
 import org.openqa.selenium.security.UserAndPassword;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,11 +40,13 @@ public abstract class TestBase extends Constant {
         int timeOutLimit = timeOutSeconds * 1000;
         int timeOutTime = 0;
         boolean present = false;
+
         while(!isElementPresent(element)){
             try {
                 Thread.sleep(100);
             } catch (Exception e) {
                 e.printStackTrace();
+
             }
             timeOutTime = timeOutTime + 100;
             if(timeOutTime == timeOutLimit){
@@ -55,6 +55,7 @@ public abstract class TestBase extends Constant {
                 break;
             }
         }
+
         Assert.assertFalse(present);
     }
 
@@ -119,18 +120,28 @@ public abstract class TestBase extends Constant {
 
     public boolean elementContainsText(WebElement e, String text){
         waitForElement(e,defaultTimeOut);
-        String pageText = e.getText();
-        if  (pageText.contains(text)){
+        if (e.getText().contains(text)){
            System.out.println("Text found!");
             return true;
-        } else {
-            System.out.println("Text not found!");
-            return false;
+        }else {
+            try {
+                if(e.getAttribute("value").contains(text)) {
+                    System.out.println("Text found!");
+                    return true;
+                }else{
+                    System.out.println("Text not found!");
+                    return false;
+                }
+            }catch (NullPointerException error){
+                System.out.println("Text not found!");
+                return false;
+            }
         }
     }
 
-    public void waitUntilElementNotPresent(WebElement element){
+    public void waitUntilElementNotPresent(WebElement element, int timeOutSeconds){
         int timeOutTime = 0;
+        timeOutSeconds = timeOutSeconds * 1000;
         boolean present = false;
         while(isElementPresent(element)){
             try {
@@ -139,7 +150,7 @@ public abstract class TestBase extends Constant {
                 e.printStackTrace();
             }
             timeOutTime = timeOutTime + 100;
-            if(timeOutTime == 5000){
+            if(timeOutTime == timeOutSeconds){
                 System.err.println("Timed out waiting for the element to disappear!");
                 present = true;
                 break;
@@ -152,10 +163,35 @@ public abstract class TestBase extends Constant {
         try{
             driver.switchTo().alert();
             return true;
-        }//try
+        }
         catch(Exception e){
             return false;
-        }//catch
+        }
     }
 
+    public void tryClick(WebElement element, int timeOutSeconds){
+        boolean found;
+        int count = 0; //Count needed for checking the Make Reservation button
+        timeOutSeconds = timeOutSeconds * 10;
+        do {
+            try {
+                element.click();
+                found = true;
+            } catch (Exception e) {
+                found = false;
+                Sleep(0.1);
+            }
+            if (count == timeOutSeconds){
+                Assert.fail("Element not found!");
+                break;
+            }
+            count++;
+        } while(!found);
+    }
+    public void openUrl(String url){
+        Driver.getWebdriver().get(url);
+        while(isAlertPresent()){
+            driver.switchTo().alert().accept();
+        }
+    }
 }

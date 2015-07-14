@@ -3,6 +3,7 @@ package steps;
 import Utils.TestBase;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
@@ -90,5 +91,20 @@ public class ManageReservationsSteps extends TestBase{
     @And("^I can choose to change or delete it$")
     public void I_can_choose_to_change_or_delete_it() throws Throwable {
         manageReservationsPage.deleteGroupName();
+    }
+
+    @Then("^I should be able to view the processing center information by clicking on the info link$")
+    public void I_should_be_able_to_view_the_processing_center_information_by_clicking_on_the_info_link() throws Throwable {
+        manageReservationsPage.checkProcessingCenterInfo();
+    }
+
+    @Given("^I click on the Modify Reservation Date/Time button$")
+    public void I_click_on_the_Modify_Reservation_Date_Time_button() throws Throwable {
+        manageReservationsPage.openModifyPopUp();
+    }
+
+    @Then("^I can modify the reservation Date or Time$")
+    public void I_can_modify_the_reservation_Date_or_Time() throws Throwable {
+        manageReservationsPage.modifyReservation();
     }
 }

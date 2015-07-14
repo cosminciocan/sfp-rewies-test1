@@ -19,12 +19,12 @@ public class Homepage extends TestBase{
     // URL
     public static String url = BaseURL;
     public static String urlStaff = StaffURL;
-    public static String logOutUrl = BaseURL + "/Account/LogOff";
+    public static String logOutUrl = BaseURL + logOutPath;
 
 
     // METHODS
     public void openUIPage(){
-        Driver.getWebdriver().get(url);
+        openUrl(url);
     }
 
 
@@ -41,5 +41,4 @@ public class Homepage extends TestBase{
             logOut();
         }
     }
-
 }

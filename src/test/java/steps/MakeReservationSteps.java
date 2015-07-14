@@ -44,4 +44,15 @@ public class MakeReservationSteps extends TestBase{
     public void the_details_of_my_reservation_are_saved() throws Throwable {
         makeReservation.checkReservationDetails();
     }
+
+    @And("^I choose to make a reservation for a higher number than available$")
+    public void I_choose_to_make_a_reservation_for_a_higher_number_than_available() throws Throwable {
+        makeReservation.highGroupNumberReservation();
+    }
+
+    @When("^I can choose to add my group to the waiting list$")
+    public void I_can_choose_to_add_my_group_to_the_waiting_list() throws Throwable {
+        makeReservation.addToWaitList();
+    }
+
 }

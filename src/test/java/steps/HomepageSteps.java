@@ -7,6 +7,7 @@ import cucumber.api.java.en.Then;
 import Utils.TestBase;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
+import pages.ContactUsPage;
 import pages.Homepage;
 import pages.LoginPage;
 import webdriver.Driver;
@@ -15,10 +16,13 @@ import webdriver.Driver;
 public class HomepageSteps extends TestBase {
     protected Homepage homepage;
     protected LoginPage loginPage;
+    protected ContactUsPage contactUsPage;
+
 
     public HomepageSteps(){
         homepage = PageFactory.initElements(Driver.getWebdriver(), Homepage.class);
         loginPage = PageFactory.initElements(Driver.getWebdriver(), LoginPage.class);
+        contactUsPage = PageFactory.initElements(Driver.getWebdriver(), ContactUsPage.class);
     }
 
 
@@ -49,4 +53,6 @@ public class HomepageSteps extends TestBase {
         }
         Assert.assertFalse("The supplied site is not in the list of predefined sites!",fail);
     }
+
+
 }

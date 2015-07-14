@@ -17,7 +17,7 @@ public class ManageReservationsPage extends TestBase {
 
 
     public void openPage(){
-        Driver.getWebdriver().get(url);
+        openUrl(url);
     }
 
     public boolean reservationsActive(){
@@ -81,9 +81,10 @@ public class ManageReservationsPage extends TestBase {
     }
 
     public void openGroupName(){
-        WebElement groupName = driver.findElement(By.id(simpleDate.format(myDate) + " 12:00:00 AM"));
-        waitForElement(groupName,defaultTimeOut);
-        groupName.click();
+
+//        WebElement groupName = driver.findElement(By.cssSelector(simpleDate.format(myDate) + " 12:00:00 AM"));
+        waitForElement(groupNameEditButton,defaultTimeOut);
+        groupNameEditButton.click();
         waitForElement(addGroupNameDiv,defaultTimeOut);
     }
 
@@ -104,8 +105,44 @@ public class ManageReservationsPage extends TestBase {
         openGroupName();
         deleteGroupNameButton.click();
         waitForElement(saveGroupName,defaultTimeOut);
-        confirmGroupNameDeletionButton.click();
+        tryClick(confirmGroupNameDeletionButton,defaultTimeOut);
         waitForElement(groupInfoDiv, defaultTimeOut);
         assertFalse(elementContainsText(groupInfoDiv, groupName));
     }
+
+    public void checkProcessingCenterInfo(){
+        waitForElement(processingCenterId,defaultTimeOut);
+        processingCenterId.click();
+        waitForElement(processingCenterInformationSpan,defaultTimeOut);
+        waitForElement(closePCInfoDiv,defaultTimeOut);
+        tryClick(closePCInfoDiv,defaultTimeOut);
+        waitForElement(processingCenterId,defaultTimeOut);
+
+    }
+
+    public void openModifyPopUp(){
+        waitForElement(modifyReservatioDate,defaultTimeOut);
+        modifyReservatioDate.click();
+
+    }
+
+    public void modifyReservation(){
+        waitForElement(changeReservationTimeDiv,defaultTimeOut);
+        waitForElement(datePicker,defaultTimeOut);
+        waitForElement(calendarActiveDate,defaultTimeOut);
+//        TODO: Refactor this at some point, because it does not work
+        if(isElementPresent(calendarActiveDate)){
+            calendarActiveDate.click();
+            waitForElement(PCDetailsModify,defaultTimeOut);
+            selectAnotherReservation.click();
+            waitForElement(saveGroupName,defaultTimeOut);
+            saveGroupName.click();
+            assertTrue(isElementPresent(confirmResChangeDiv));
+            assertTrue(isElementPresent(confirmReservationChange));
+            tryClick(confirmReservationChange,defaultTimeOut);
+        }else
+            closePCInfoDiv.click();
+        waitForElement(headerReservationsDiv,defaultTimeOut);
+    }
+
 }

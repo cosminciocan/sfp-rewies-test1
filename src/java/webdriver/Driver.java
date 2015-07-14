@@ -11,7 +11,7 @@ public class Driver {
 
     public static void initWebdriver() {
 //        driver = new FirefoxDriver(); // for Firefox
-//        System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriver.exe");
         driver = new ChromeDriver(); // For chrome
         System.out.println("Starting browser");
         driver.manage().window().maximize();
@@ -27,7 +27,6 @@ public class Driver {
 
     /** Screenshot functionality to be integrated with the fail method
       WebDriver driver = new FirefoxDriver();
-     driver.get("http://www.google.com/");
      File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
      // Now you can do whatever you need to do with it, for example copy somewhere
      FileUtils.copyFile(scrFile, new File("c:\\tmp\\screenshot.png"));

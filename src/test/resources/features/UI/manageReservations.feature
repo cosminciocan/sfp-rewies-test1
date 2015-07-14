@@ -11,10 +11,6 @@ Feature: Manage reservations feature
     Then I can see the reservations my user has
     And I log out
 
-  Scenario: Cancel active reservations
-    Then I select to cancel all the active reservations
-    And I log out
-
   Scenario: Modify group size
     When I choose to modify the group size
     Then The new value is saved
@@ -25,9 +21,22 @@ Feature: Manage reservations feature
     Then I should be re-directed to the Add/View Group Members page
     And I log out
 
-  Scenario: The user clicks on 'Add Organization/Group Name' link
+  Scenario: Modify group name
     When I click on Add Organization/Group Name link
     And I can add and save a Group Name
     Then The name is saved
     And I can choose to change or delete it
+    And I log out
+
+#    TODO: Uncomment this when issue with displaying the info is fixed
+#  Scenario: View processing center information
+#    Then I should be able to view the processing center information by clicking on the info link
+
+  Scenario: Modify reservation time and date
+    Given I click on the Modify Reservation Date/Time button
+    Then I can modify the reservation Date or Time
+    And I log out
+
+  Scenario: Cancel active reservations
+    Then I select to cancel all the active reservations
     And I log out

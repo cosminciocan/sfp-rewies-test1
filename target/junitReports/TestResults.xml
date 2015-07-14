@@ -1,43 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="29.040414">
-<testcase classname="Create capacity shift" name="Create a capacity shift" time="17.35028">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="13" time="62.493906">
+<testcase classname="Create capacity shift" name="Create a capacity shift" time="11.805156">
 <system-out><![CDATA[Given I access the "staff" site.............................................passed
+And I create a capacity shift...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Login Feature" name="Login to the UI site" time="11.483424">
+<testcase classname="Managing the waiting list" name="The user clicks on Edit button for a reservation." time="6.441934">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+When I navigate to the Wai List Requests page...............................passed
+Then I check if there are any waiting list requests, and if not I create one.passed
+And I navigate to the Wai List Requests page................................passed
+When I choose to edit the waiting list request..............................passed
+Then I can modify the request group size....................................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Managing the waiting list" name="Delete all waiting list requests" time="3.860075">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+When I navigate to the Wai List Requests page...............................passed
+Then I check if there are any waiting list requests, and if not I create one.passed
+And I navigate to the Wai List Requests page................................passed
+And I cancel all the wait list requests.....................................passed
+Then A message informing the user about no wait list found will be visible..passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Feature" name="Login to the UI site" time="1.684575">
 <system-out><![CDATA[Given I access the "ui" site................................................passed
 Then I should be logged in..................................................passed
+And I log out...............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Making reservations tests" name="Make a reservation" time="0.20671">
-<failure message="org.openqa.selenium.UnhandledAlertException: unexpected alert open&#10;  (Session info: chrome=43.0.2357.124)&#10;  (Driver info: chromedriver=2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 4 milliseconds: null&#10;Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'&#10;System info: host: 'SF14', ip: '192.168.0.147', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\cciocan\AppData\Local\Temp\scoped_dir14148_16792}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=43.0.2357.124, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 5e8296c9b82c12fa3970784951078022&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:422)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)&#13;&#10;&#9;at pages.EditCapacityShiftPage.openPage(EditCapacityShiftPage.java:39)&#13;&#10;&#9;at steps.CreateCapacityShiftSteps.I_create_a_capacity_shift(CreateCapacityShiftSteps.java:22)&#13;&#10;&#9;at ✽.And I create a capacity shift(UI/makeReservation.feature:6)&#13;&#10;"><![CDATA[Given I access the "staff" site.............................................passed
-And I create a capacity shift...............................................failed
-Then I access the "ui" site.................................................skipped
-And I should be logged in...................................................skipped
-Given I navigate to the Make a Reservation page.............................skipped
-When I fill in the details..................................................skipped
-Then I should see the list of available reservations........................skipped
-
-StackTrace:
-org.openqa.selenium.UnhandledAlertException: unexpected alert open
-  (Session info: chrome=43.0.2357.124)
-  (Driver info: chromedriver=2.15.322448 (52179c1b310fec1797c81ea9a20326839860b7d3),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4 milliseconds: null
-Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
-System info: host: 'SF14', ip: '192.168.0.147', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\cciocan\AppData\Local\Temp\scoped_dir14148_16792}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, version=43.0.2357.124, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5e8296c9b82c12fa3970784951078022
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:162)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:304)
-	at pages.EditCapacityShiftPage.openPage(EditCapacityShiftPage.java:39)
-	at steps.CreateCapacityShiftSteps.I_create_a_capacity_shift(CreateCapacityShiftSteps.java:22)
-	at ✽.And I create a capacity shift(UI/makeReservation.feature:6)
-]]></failure>
+<testcase classname="Login Feature" name="User submits a Contact Us form" time="3.18881">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+Then I should be logged in..................................................passed
+And I navigate to the contact us page.......................................passed
+And I complete the form and I submit it.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Making reservations tests" name="Make a reservation" time="6.238332">
+<system-out><![CDATA[Given I access the "staff" site.............................................passed
+And I create a capacity shift...............................................passed
+Then I access the "ui" site.................................................passed
+And I should be logged in...................................................passed
+Given I navigate to the Make a Reservation page.............................passed
+When I fill in the details..................................................passed
+Then I should see the list of available reservations........................passed
+And I choose to make a reservation..........................................passed
+Then the details of my reservation are saved................................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Making reservations tests" name="Add to waiting list" time="5.019029">
+<system-out><![CDATA[Given I access the "staff" site.............................................passed
+And I create a capacity shift...............................................passed
+Then I access the "ui" site.................................................passed
+And I should be logged in...................................................passed
+Given I navigate to the Make a Reservation page.............................passed
+When I fill in the details..................................................passed
+Then I should see the list of available reservations........................passed
+And I choose to make a reservation for a higher number than available.......passed
+When I can choose to add my group to the waiting list.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manage reservations feature" name="View my reservations" time="2.757039">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+When I navigate to the Manage Reservations page.............................passed
+Then I check if there are any active reservations, and if not I create one..passed
+Then I can see the reservations my user has.................................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manage reservations feature" name="Modify group size" time="4.283812">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+When I navigate to the Manage Reservations page.............................passed
+Then I check if there are any active reservations, and if not I create one..passed
+When I choose to modify the group size......................................passed
+Then The new value is saved.................................................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manage reservations feature" name="The user clicks on the Add/View Group Members link" time="3.584735">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+When I navigate to the Manage Reservations page.............................passed
+Then I check if there are any active reservations, and if not I create one..passed
+When I click on the Add/View Group Members Link.............................passed
+Then I should be re-directed to the Add/View Group Members page.............passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manage reservations feature" name="Modify group name" time="4.413487">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+When I navigate to the Manage Reservations page.............................passed
+Then I check if there are any active reservations, and if not I create one..passed
+When I click on Add Organization/Group Name link............................passed
+And I can add and save a Group Name.........................................passed
+Then The name is saved......................................................passed
+And I can choose to change or delete it.....................................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manage reservations feature" name="Modify reservation time and date" time="3.943971">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+When I navigate to the Manage Reservations page.............................passed
+Then I check if there are any active reservations, and if not I create one..passed
+Given I click on the Modify Reservation Date/Time button....................passed
+Then I can modify the reservation Date or Time..............................passed
+And I log out...............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Manage reservations feature" name="Cancel active reservations" time="5.272951">
+<system-out><![CDATA[Given I access the "ui" site................................................passed
+When I navigate to the Manage Reservations page.............................passed
+Then I check if there are any active reservations, and if not I create one..passed
+Then I select to cancel all the active reservations.........................passed
+And I log out...............................................................passed
+]]></system-out>
 </testcase>
 </testsuite>
