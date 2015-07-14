@@ -16,7 +16,7 @@ public class Driver {
 //        System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriver.exe");
 //        driver = new ChromeDriver(); // For chrome
 //        TimeUnit.SECONDS.sleep(1);
-        System.out.println("Starting browser");
+        System.out.println("Starting browser...");
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         Runtime.getRuntime().addShutdownHook(new Thread() {

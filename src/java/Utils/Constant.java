@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class Constant {
+public class Constant{
 
     //BASE URL
     public static final String BaseURL = "http://sfvm22/VMS";
