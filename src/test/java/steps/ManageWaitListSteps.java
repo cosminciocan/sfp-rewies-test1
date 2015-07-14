@@ -1,14 +1,12 @@
 package steps;
 
 import Utils.TestBase;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.support.PageFactory;
 import pages.MakeReservationPage;
 import pages.ManageWaitListPage;
-import sun.invoke.anon.AnonymousClassLoader;
 import webdriver.Driver;
 
 public class ManageWaitListSteps extends TestBase{

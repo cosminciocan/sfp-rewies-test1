@@ -4,8 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/.idea/.name" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9f279cc-cc0a-4b48-afd0-1d212621be64" name="Default" comment="Added tests for making a reservation and creating a shift before doing so">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/steps/HomepageSteps.class" afterPath="$PROJECT_DIR$/target/test-classes/steps/HomepageSteps.class" />
+    <list default="true" id="e9f279cc-cc0a-4b48-afd0-1d212621be64" name="Default" comment="Some Stuff">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/steps/ManageWaitListSteps.java" afterPath="$PROJECT_DIR$/src/test/java/steps/ManageWaitListSteps.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cucumber-java-sample.iws" />
@@ -82,10 +82,10 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="ManageReservationsSteps.java" pinned="false" current-in-tab="true">
+              <file leaf-file-name="ManageReservationsSteps.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/test/java/steps/ManageReservationsSteps.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="1.0922619">
+                    <state vertical-scroll-proportion="0.0">
                       <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
                       <folding>
                         <element signature="imports" expanded="true" />
@@ -104,14 +104,12 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="ManageWaitListSteps.java" pinned="false" current-in-tab="false">
+              <file leaf-file-name="ManageWaitListSteps.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/test/java/steps/ManageWaitListSteps.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.0">
-                      <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-                      <folding>
-                        <element signature="imports" expanded="true" />
-                      </folding>
+                    <state vertical-scroll-proportion="0.15178572">
+                      <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                      <folding />
                     </state>
                   </provider>
                 </entry>
@@ -177,7 +175,7 @@
               <file leaf-file-name="ContactUsPage.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/test/java/pages/ContactUsPage.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="0.45316455">
+                    <state vertical-scroll-proportion="0.12911393">
                       <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
                       <folding>
                         <element signature="imports" expanded="true" />
@@ -346,7 +344,6 @@
         <option value="$PROJECT_DIR$/src/test/resources/features/UI/makeReservation.feature" />
         <option value="$PROJECT_DIR$/src/test/java/steps/MakeReservationSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/steps/ManageWaitListSte.java" />
-        <option value="$PROJECT_DIR$/src/test/java/steps/ManageWaitListSteps.java" />
         <option value="$PROJECT_DIR$/src/java/webdriver/Driver.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/Staff/CreateCapacityShift.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/UI/ManageWaitList.feature" />
@@ -361,6 +358,7 @@
         <option value="$PROJECT_DIR$/src/java/Utils/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/ManageReservationsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/ContactUsPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/steps/ManageWaitListSteps.java" />
       </list>
     </option>
   </component>
@@ -1191,7 +1189,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436870346661</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Some Stuff">
+      <created>1436870566851</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1436870566851</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1287,7 +1291,8 @@
     <MESSAGE value="Added framework to git" />
     <MESSAGE value="Added more tests for make reservation and capacity shifts" />
     <MESSAGE value="Added tests for making a reservation and creating a shift before doing so" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added tests for making a reservation and creating a shift before doing so" />
+    <MESSAGE value="Some Stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some Stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1557,16 +1562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/ManageWaitListSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/steps/MakeReservationSteps.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1614,16 +1609,6 @@
           <folding>
             <element signature="e#325#326#0" expanded="true" />
             <element signature="e#425#426#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/steps/ManageReservationsSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0922619">
-          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1691,7 +1676,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/ContactUsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45316455">
+        <state vertical-scroll-proportion="0.12911393">
           <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1740,6 +1725,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6439394">
           <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/ManageReservationsSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/steps/ManageWaitListSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15178572">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
