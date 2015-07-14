@@ -11,6 +11,7 @@ public class Driver {
     private static WebDriver driver;
 
     public static void initWebdriver(){
+//        If FF is used, uncomment the login method from Homepage
         driver = new FirefoxDriver(); // for Firefox
 //        System.setProperty("webdriver.chrome.driver", "chromeDriver\\chromedriver.exe");
 //        driver = new ChromeDriver(); // For chrome
